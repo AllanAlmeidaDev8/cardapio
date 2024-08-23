@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+h1{
+    font-family: "Rowdies", sans-serif;
+    
+}
+
+.ingredientes_mussarela{
+    color: rgba(128, 86, 7, 0.959);
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    font-size: 22px;
+    text-align: center;
+    
+
+}
+.ingredientes_mussarela li{
+ text-align: center;
+ display: auto;
+
+}
+
