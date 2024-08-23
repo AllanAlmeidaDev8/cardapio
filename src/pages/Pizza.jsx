@@ -6,6 +6,7 @@ import { FaCheck } from "react-icons/fa6"; //inserido icones do react icons
 import './Forms.css';
 
 import './Pizza.css';
+import { Link } from 'react-router-dom';
 
 
 const Pizza = () => {
@@ -183,9 +184,11 @@ const Pizza = () => {
 
 
                             </div>
-
-                            <button onClick={handleRevisarPedido}>Revisar Pedido</button>
-
+                                <div className="btn-box">
+                                     <button className='btn' onClick={handleRevisarPedido}>Revisar Pedido</button>
+                                     <Link to='/cardapio' className='btn'>Ver o cardapio</Link>
+                                </div>
+                           
 
                         </form>
                     </div>
