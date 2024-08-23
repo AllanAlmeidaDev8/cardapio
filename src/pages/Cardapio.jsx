@@ -7,7 +7,7 @@ import './Cardapio.css'
 const Cardapio = () => {
     return (
         <div className='conteiner_cardapio home'>
-            <h2 className='subTitle'>Cardaipio page</h2>
+            <h2 className='subTitle'>Cardapio page</h2>
             <fieldset>
             <div className="container_cardapio">
                 <ul className="list_link">
