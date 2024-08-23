@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+.folder {
+    background-image: url(/public/pz01.jpg);
+    background-size: cover;
+    width: 100vw;
+    height: 30vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+
+.box_glass img {
+    width: 204px;
+    box-shadow: 3px 3px 10px #000000e6;
+    border-radius: 101px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+main {
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.title {
+    color: white;
+    margin-top: 254px;
+    padding: 20px;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 3em;
+  }
+.subTitle{
+    font-size: 2em;
+    padding: 20px;
+}
+
+.home {
+    color: rgb(255, 255, 255);
+    padding-top: 20px;
+}
+
+.conteiner_top {
+    margin-top: 10px;
+    padding: 20px;
+    
+}
+
+.btn_cardapio {
+    border-radius: 5px;
+    background-color: rgb(255, 239, 94);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.247); 
+  
+}
+
+.btn_link {
+    text-decoration: none;
+    line-height: 3;
+    padding: 10px 30px;
+    font-size: 2em;
+   
+}
+
+li{
+    list-style-type: none;
+}
