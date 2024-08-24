@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         element:<Cardapio/>
       },
       {
-        path:"/pizzas",
+        path:"/cardapio/pizzas",
         element:<Pizza/>
       },
       {

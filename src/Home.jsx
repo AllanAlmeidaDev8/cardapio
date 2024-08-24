@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './index.css'
+import './index.css';
+import './pages/Button.css';
 
 
 
@@ -9,7 +10,7 @@ const Home = () => {
     <div>
         <div className='conteiner_top'>
             <h2>Bem vindo ao Sr. Pizza bar</h2>
-            <Link to='/cardapio'>Cardapio</Link>
+            <Link to='/cardapio' role="button" className="button-name">Cardapio</Link>
         </div>
     </div>
   )

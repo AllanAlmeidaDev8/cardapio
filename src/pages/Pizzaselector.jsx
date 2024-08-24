@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import './Pizza.css';
 
 const Pizzaselector = ({ tipo, onSelect }) => {
     const [selecionados, setSelecionados] = useState([]);
 
     const saboresPizzas = {
         PizzaTradicional: [
-            { nome: "Mussarela", ingredientes: ["Mussarela", "Orégano","Tomate"] },
+            { nome: "Mussarela", ingredientes: ["Mussarela", "Orégano","Tomate"],imagem: "./assets/mussarela.jpg" },
             { nome: "Presunto", ingredientes: ["Presunto", "Mussarela", "Orégano","Cebola"] },
             { nome: "Bacon", ingredientes: ["Bacon", "Mussarela", "Orégano", "Cebola"] },
             { nome: "Marguerita", ingredientes: ["Mussarela","Manjericão","Tomate", "Oregano" ] },
@@ -23,7 +24,7 @@ const Pizzaselector = ({ tipo, onSelect }) => {
         ],
         PizzaEspecial: [
             { nome: "5 Queijos", ingredientes: ["Mussarela", "Gorgonzola", "Parmesão", "Catupiry", "Provolone"] },
-            { nome: "Sr. Italiano", ingredientes: ["Pepperoni", "Tomate", "Mussarela"] },
+            { nome: "Sr", ingredientes: ["Pepperoni", "Tomate", "Mussarela"] },
             { nome: "Pizza Robust", ingredientes: ["Presunto", "Bacon", "Calabresa"] },
             { nome: "Atum", ingredientes: ["Atum", "Cebola", "Orégano"] },
             { nome: "Frango", ingredientes: ["Frango", "Catupiry", "Orégano"] },
@@ -71,6 +72,7 @@ const Pizzaselector = ({ tipo, onSelect }) => {
                 <fieldset key={index}>
                     <legend>{sabor.nome}</legend>
                     <input
+                        className='checkbox'
                         type="checkbox"
                         id={sabor.nome}
                         name={sabor.nome}
@@ -78,13 +80,16 @@ const Pizzaselector = ({ tipo, onSelect }) => {
                         onChange={() => handleCheckboxChange(sabor.nome)}
                     />
                     <label htmlFor={sabor.nome}>
-                        <div className="ingrediente_list" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', gap: '10px' }}>
-                            {sabor.ingredientes.map((ingrediente, idx) => (
-                                <React.Fragment key={idx}>
-                                    <p>{ingrediente}</p>
-                                    {idx < sabor.ingredientes.length - 1 && <p>-</p>}
-                                </React.Fragment>
-                            ))}
+                        <div className="sabor-container">
+                            <img src={sabor.imagem} alt={`Pizza de ${sabor.nome}`} className="pizza-imagem" />
+                            <div className="ingrediente_list">
+                                {sabor.ingredientes.map((ingrediente, idx) => (
+                                    <React.Fragment key={idx}>
+                                        <p>{ingrediente}</p>
+                                        {idx < sabor.ingredientes.length - 1 && <p>-</p>}
+                                    </React.Fragment>
+                                ))}
+                            </div>
                         </div>
                     </label>
                 </fieldset>

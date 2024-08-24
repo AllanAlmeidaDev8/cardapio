@@ -1,11 +1,11 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet,Link } from 'react-router-dom'
 import './App.css'
 
 function App() {
 
 
   return (
-    <div className="conteiner_app">
+    <div className="conteiner_app folder">
       <div className="folder">
         
 
@@ -19,6 +19,7 @@ function App() {
 
         <Outlet />
       </main>
+      <footer><Link to="https://www.instagram.com/opennetbr" target='_blank'>&#169; OPENNET &#169;</Link></footer>
 
     </div>
   )

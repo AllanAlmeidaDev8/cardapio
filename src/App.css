@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
+
+.intro p{
+    color: white;
+}
 .folder {
     background-image: url(/public/folder.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 30vh;
 }

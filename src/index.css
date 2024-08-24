@@ -1,14 +1,27 @@
 *{
   margin: 0;
   padding: 0;
-color: black;
 }
 body{
   background-color: #840000;
-  
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
   font-style: normal;
   box-sizing: border-box;  
+}
+.title{
+  color: white;
+}
+footer{
+  display: flex;
+  justify-content: center;
+}
+li{
+  list-style-type: none;
+}
+footer a{
+  color: white;
+  text-decoration: none;
+  padding: 20px;
 }
 

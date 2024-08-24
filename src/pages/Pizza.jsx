@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import ResumoPedido from './ResumoPedido'; // Verifique se o caminho está correto
-import Pizzaselector from './Pizzaselector'; // Verifique se o caminho está correto
+import ResumoPedido from './ResumoPedido';
+import Pizzaselector from './Pizzaselector';
+import './Pizza.css';
+import './Button.css';
 
-const Pizza = () => {
+const Pizza = () => {//
     const [tipo, setTipo] = useState('');
     const [tamanho, setTamanho] = useState('');
     const [nome, setNome] = useState('');
@@ -14,6 +16,7 @@ const Pizza = () => {
 
     const handleTipoChange = (e) => {
         setTipo(e.target.value);
+        setTamanho(''); // Reseta o tamanho quando o tipo muda
     };
 
     const handleTamanhoChange = (e) => {
@@ -76,32 +79,43 @@ const Pizza = () => {
     };
 
     return (
-        <div className="container_">
+        <div className="container">
             {!mostrarResumo ? (
                 <>
-                    <div className="pizza_type">
-                        <h2>Escolha qual o tipo de pizza</h2>
-                        <input type="radio" id="tipo_top" name="ptype" value="PizzaTop" onChange={handleTipoChange} />
-                        <label htmlFor="tipo_top">Pizza Top</label>
-
-                        <input type="radio" id="tipo_especial" name="ptype" value="PizzaEspecial" onChange={handleTipoChange} />
-                        <label htmlFor="tipo_especial">Pizza Especial</label>
-
-                        <input type="radio" id="tipo_tradicional" name="ptype" value="PizzaTradicional" onChange={handleTipoChange} />
-                        <label htmlFor="tipo_tradicional">Pizza Tradicional</label>
+                    <div className="pizza_type type">
+                        <h2 className='subTitle'>Escolha qual o tipo de pizza</h2>
+                        <div className="input_box">
+                            <input type="radio" id="tipo_top" name="ptype" value="PizzaTop" onChange={handleTipoChange} />    <label htmlFor="tipo_top">Top</label>
+                            <input type="radio" id="tipo_especial" name="ptype" value="PizzaEspecial" onChange={handleTipoChange} />
+                            <label htmlFor="tipo_especial">Especial</label>
+                            <input type="radio" id="tipo_tradicional" name="ptype" value="PizzaTradicional" onChange={handleTipoChange} />
+                            <label htmlFor="tipo_tradicional">Tradicional</label>
+                        </div>
                     </div>
 
-                    <div className="pizza_size">
-                        <h2>Escolha o tamanho da sua Pizza</h2>
-                        <input type="radio" id="size_m" name="psize" value="Media" onChange={handleTamanhoChange} />
-                        <label htmlFor="size_m">Pizza Média</label>
+                    <div className="pizza_size type">
+                        <h2 className='subTitle'>Escolha o tamanho da sua Pizza</h2>
+                        <div className="input_box">
+                            <input type="radio" id="size_m" name="psize" value="Media" onChange={handleTamanhoChange} />
+                            <label htmlFor="size_m">Pizza Média</label>
 
-                        <input type="radio" id="size_g" name="psize" value="Grande" onChange={handleTamanhoChange} />
-                        <label htmlFor="size_g">Pizza Grande</label>
+                            <input type="radio" id="size_g" name="psize" value="Grande" onChange={handleTamanhoChange} />
+                            <label htmlFor="size_g">Pizza Grande</label>
 
-                        <input type="radio" id="size_f" name="psize" value="Familia" onChange={handleTamanhoChange} />
-                        <label htmlFor="size_f">Pizza Família</label>
+                            <input type="radio" id="size_f" name="psize" value="Familia" onChange={handleTamanhoChange} />
+                            <label htmlFor="size_f">Pizza Família</label>
+                        </div>
                     </div>
+
+                    {/* Exibe os valores com base no tipo selecionado */}
+                    {tipo && (
+                        <div className="pizza_prices">
+                            <h3>Valores:</h3>
+                            <p>Média: R$ {valores[tipo].Media.toFixed(2)}</p>
+                            <p>Grande: R$ {valores[tipo].Grande.toFixed(2)}</p>
+                            <p>Família: R$ {valores[tipo].Familia.toFixed(2)}</p>
+                        </div>
+                    )}
 
                     {tipo && (
                         <div className="pizza_sabores">
@@ -111,26 +125,35 @@ const Pizza = () => {
 
                     <div className="pedido_details">
                         <h2>Detalhes do Pedido</h2>
-                        <form action="">
-                            <p><label htmlFor="nome">Nome:</label><input type="text" placeholder="Nome" value={nome} onChange={handleNomeChange} id='nome' /></p>
-                            <p><label htmlFor="End">Endereço:</label><input type="text" placeholder="Endereço" value={endereco} onChange={handleEnderecoChange} id='End' /></p>
-                            <p><label htmlFor="PontR">Ponto de Referência:</label><input type="text" placeholder="Ponto de Referência" value={pontoReferencia} onChange={handlePontoReferenciaChange} id='PontR'/></p>
-                           
-                          
-                            <div>
-                                 <label htmlFor="forma_pagamento">Forma de Pagamento:</label>
-                                 <select id="forma_pagamento"placeholder="Forma de Pagamento" value={formaPagamento} onChange={handleFormaPagamentoChange}
-                                 >
-                                     <option value="">Selecione</option>
-                                     <option value="dinheiro">Dinheiro</option>
-                                    <option value="pix">Pix QR code</option>
-                                     <option value="cartao de credito">Cartão de Crédito</option>
-                                    <option value="cartao de debito">Cartão de Débito</option>
-                                 </select>
-                             </div>
+                        <form className='cadastro'>
                             
-                            <button onClick={handleRevisarPedido}>Revisar Pedido</button>
+                                <label htmlFor="nome">Nome:</label>
+                                <input className='input' type="text" placeholder="Nome" value={nome} onChange={handleNomeChange} id='nome' />
+                            
+                           
+                            
+                                <label htmlFor="End">Endereço:</label>
+                                <input className='input' type="text" placeholder="Endereço" value={endereco} onChange={handleEnderecoChange} id='End' />
+                            
+                           
+                                <label htmlFor="PontR">Ponto de Referência:</label>
+                                <input className='input' type="text" placeholder="Ponto de Referência" value={pontoReferencia} onChange={handlePontoReferenciaChange} id='PontR' />
                         </form>
+
+                        <div className='referencia'>
+                            <label htmlFor="forma_pagamento">Forma de Pagamento:</label>
+                            <select id="forma_pagamento" placeholder="Forma de Pagamento" value={formaPagamento} onChange={handleFormaPagamentoChange}>
+                                <option value="">Selecione</option>
+                                <option value="dinheiro">Dinheiro</option>
+                                <option value="pix">Pix QR code</option>
+                                <option value="cartao de credito">Cartão de Crédito</option>
+                                <option value="cartao de debito">Cartão de Débito</option>
+                            </select>
+                        </div>
+
+                        <div className="btn">
+                        <button type="button" onClick={handleRevisarPedido} role="button" className="button-name">Revisar Pedido</button>
+                        </div>
                     </div>
                 </>
             ) : (
@@ -151,4 +174,3 @@ const Pizza = () => {
 };
 
 export default Pizza;
-
