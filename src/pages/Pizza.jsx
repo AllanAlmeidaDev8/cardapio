@@ -185,7 +185,7 @@ const Pizza = () => {
 
                             </div>
                                 <div className="btn-box">
-                                     <button className='btn' onClick={handleRevisarPedido}>Revisar Pedido</button>
+                                     <button className='btn' onClick={handleRevisarPedido}>Finaliza Pedido</button>
                                      <Link to='/cardapio' className='btn'>Ver o cardapio</Link>
                                 </div>
                            

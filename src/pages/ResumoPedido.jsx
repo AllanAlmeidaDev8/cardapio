@@ -37,7 +37,7 @@ Forma de Pagamento: ${formaPagamento ? formaPagamento.charAt(0).toUpperCase() + 
             <p><strong>Ponto de Referência:</strong> {pontoReferencia}</p>
             <p><strong>Forma de Pagamento:</strong> {formaPagamento ? formaPagamento.charAt(0).toUpperCase() + formaPagamento.slice(1) : 'Não selecionada'}</p>
             <button onClick={enviarWhatsApp}>Confirmar Pedido</button>
-            <Link to='/pizza'>Voltar</Link>
+            
         </div>
     );
  
