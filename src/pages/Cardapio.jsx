@@ -7,9 +7,9 @@ import './Cardapio.css'
 
 const Cardapio = () => {
     return (
-        <div className=''>
+        <div className='container_cardapio'>
             <h2>Cardaipio page</h2>
-            <div className="container_cardapio">
+            <div className="">
                 <ul className="list_link">
                     <li><Link to="/pizzas">Pizzas</Link></li>
                     <li><Link>Tira Gosto</Link></li>
