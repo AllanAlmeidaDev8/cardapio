@@ -1,24 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import './Cardapio.css'
+
 
 
 
 const Cardapio = () => {
     return (
-        <div className='conteiner_cardapio home'>
-            <h2 className='subTitle'>Cardapio page</h2>
-            <fieldset>
+        <div className=''>
+            <h2>Cardaipio page</h2>
             <div className="container_cardapio">
                 <ul className="list_link">
-                    <li><Link to="/pizzas" className='btn_link'>Pizzas</Link></li>
-                    <li><Link to='/cardapio/tira_gosto' className='btn_link'>Tira Gosto</Link></li>
-                    <li><Link className='btn_link'>Pirão</Link></li>
-                    <li><Link className='btn_link'>Petiscos</Link></li>
-                    <li><Link className='btn_link'>Bebidas</Link></li>
+                    <li><Link to="/pizzas">Pizzas</Link></li>
+                    <li><Link>Tira Gosto</Link></li>
+                    <li><Link>Pirão</Link></li>
+                    <li><Link>Petiscos</Link></li>
+                    <li><Link>Bebidas</Link></li>
                 </ul>
             </div>
-            </fieldset>
         </div>
     )
 }

@@ -4,15 +4,13 @@ import App from './App.jsx'
 import './index.css'
 import Cardapio from './pages/Cardapio.jsx'
 
-
-
-
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import Home from './Home.jsx';
 import Pizza from './pages/Pizza.jsx'
 import Pizzaselector from './pages/Pizzaselector.jsx'
-import TiraGosto from './pages/TiraGosto.jsx'
-
 
 
 const router = createBrowserRouter([
@@ -35,13 +33,9 @@ const router = createBrowserRouter([
       {
         path:"/selector",
         element:<Pizzaselector/>
-      },
-      {
-        path:'/cardapio/tira_gosto',
-        element:<TiraGosto/>
       }
     ]
-  }
+  },
 ]);
 
 createRoot(document.getElementById('root')).render(

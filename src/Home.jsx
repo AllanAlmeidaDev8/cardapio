@@ -1,20 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './index.css';
-import { FaArrowRight } from "react-icons/fa6";
+import './index.css'
 
 
 
 const Home = () => {
   return (
-    <div className='home'> 
-    <h2 className='subTitle'>Veja nosso cardápio</h2>
+    <div>
         <div className='conteiner_top'>
-            <Link to='/cardapio' className='btn_link btn_cardapio'>
-            Cardapio <FaArrowRight />
-            </Link>
+            <h2>Bem vindo ao Sr. Pizza bar</h2>
+            <Link to='/cardapio'>Cardapio</Link>
         </div>
-       
     </div>
   )
 }

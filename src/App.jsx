@@ -1,6 +1,5 @@
-import { Link, Outlet } from 'react-router-dom'
-import './App.css';
-
+import { Outlet } from 'react-router-dom'
+import './App.css'
 
 function App() {
 
@@ -18,7 +17,7 @@ function App() {
 
         <Outlet />
       </main>
-      <footer><Link to='https://www.instagram.com/opennetbr/?next=%2F'>&copy; OPENNET &copy;</Link></footer>
+
     </div>
   )
 }
