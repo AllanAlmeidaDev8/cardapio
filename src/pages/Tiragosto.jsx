@@ -192,9 +192,9 @@ Total: R$ ${calcularTotal()}
                     {carrinho.map((item, index) => (
                         <li key={index}>
                             {item.nome} x {item.quantidade} - R$ {(item.valor * item.quantidade).toFixed(2)}
-                            <div className="btn">
-                            <button onClick={() => adicionarAoCarrinho(item)}><p>+</p></button>
-                            <button onClick={() => removerDoCarrinho(item)}>-</button>
+                            <div className="btnCar">
+                            <button className='add' onClick={() => adicionarAoCarrinho(item)}>+</button>
+                            <button className='remov' onClick={() => removerDoCarrinho(item)}>-</button>
                             </div>
                         </li>
                     ))}
