@@ -3,10 +3,10 @@ import './Pizza.css';
 
 const Pizzaselector = ({ tipo, onSelect }) => {
     const [selecionados, setSelecionados] = useState([]);
-
+    
     const saboresPizzas = {
         PizzaTradicional: [
-            { nome: "Mussarela", ingredientes: ["Mussarela", "Orégano","Tomate"],imagem: "./assets/mussarela.jpg" },
+            { nome: "Mussarela", ingredientes: ["Mussarela", "Orégano","Tomate"], imagem: "./assets/mussarela.jpg" },
             { nome: "Presunto", ingredientes: ["Presunto", "Mussarela", "Orégano","Cebola"] },
             { nome: "Bacon", ingredientes: ["Bacon", "Mussarela", "Orégano", "Cebola"] },
             { nome: "Marguerita", ingredientes: ["Mussarela","Manjericão","Tomate", "Oregano" ] },
@@ -48,14 +48,15 @@ const Pizzaselector = ({ tipo, onSelect }) => {
 
     const handleCheckboxChange = (nome) => {
         const isSelected = selecionados.includes(nome);
+        const maxSabores = tipo === 'PizzaTradicional' ? 3 : 4;
 
         if (isSelected) {
             setSelecionados(selecionados.filter(sabor => sabor !== nome));
         } else {
-            if (selecionados.length < 4) {
+            if (selecionados.length < maxSabores) {
                 setSelecionados([...selecionados, nome]);
             } else {
-                alert('Você pode selecionar no máximo 4 sabores.');
+                alert(`Você pode selecionar no máximo ${maxSabores} sabores.`);
             }
         }
     };

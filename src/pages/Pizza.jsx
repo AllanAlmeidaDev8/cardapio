@@ -84,6 +84,7 @@ const Pizza = () => {//
                 <>
                     <div className="pizza_type type">
                         <h2 className='subTitle'>Escolha qual o tipo de pizza</h2>
+                       
                         <div className="input_box">
                             <input type="radio" id="tipo_top" name="ptype" value="PizzaTop" onChange={handleTipoChange} />    <label htmlFor="tipo_top">Top</label>
                             <input type="radio" id="tipo_especial" name="ptype" value="PizzaEspecial" onChange={handleTipoChange} />
@@ -97,13 +98,13 @@ const Pizza = () => {//
                         <h2 className='subTitle'>Escolha o tamanho da sua Pizza</h2>
                         <div className="input_box">
                             <input type="radio" id="size_m" name="psize" value="Media" onChange={handleTamanhoChange} />
-                            <label htmlFor="size_m">Pizza Média</label>
+                            <label htmlFor="size_m">Média</label>
 
                             <input type="radio" id="size_g" name="psize" value="Grande" onChange={handleTamanhoChange} />
-                            <label htmlFor="size_g">Pizza Grande</label>
+                            <label htmlFor="size_g">Grande</label>
 
                             <input type="radio" id="size_f" name="psize" value="Familia" onChange={handleTamanhoChange} />
-                            <label htmlFor="size_f">Pizza Família</label>
+                            <label htmlFor="size_f">Família</label>
                         </div>
                     </div>
 

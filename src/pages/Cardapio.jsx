@@ -15,10 +15,10 @@ const Cardapio = () => {
             <div className="itens_list">
                 <ul className="list_link">
                     <li><Link to="/cardapio/pizzas" role="button" className="button-name">Pizzas</Link></li>
-                    <li><Link role="button" className="button-name">Tira Gosto</Link></li>
-                    <li><Link role="button" className="button-name">Pirão</Link></li>
-                    <li><Link role="button" className="button-name">Petiscos</Link></li>
+                    <li><Link to="/cardapio/tita_gostos" role="button" className="button-name">Tira Gosto e petiscos</Link></li>
+                    <li><Link to="/cardapio/pirao" role="button" className="button-name">Pirão</Link></li>                    
                     <li><Link role="button" className="button-name">Bebidas</Link></li>
+                   
                 </ul>
             </div>
         </div>

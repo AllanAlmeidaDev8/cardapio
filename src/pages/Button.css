@@ -1,7 +1,6 @@
 
 /* Css Button */ 
 .btn{
-    
     padding: 20px;
 }
 .button-name {
@@ -17,8 +16,8 @@
     display: inline-flex;
     font-family: "JetBrains Mono",monospace;
     font-weight: 600;
-    height: 48px;
-    width: 150px;
+    height: 55px;
+    width: 250px;
     justify-content: center;
     line-height: 1;
     list-style: none;

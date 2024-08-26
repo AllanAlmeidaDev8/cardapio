@@ -11,6 +11,8 @@ import {
 import Home from './Home.jsx';
 import Pizza from './pages/Pizza.jsx'
 import Pizzaselector from './pages/Pizzaselector.jsx'
+import Tiragosto from './pages/Tiragosto.jsx'
+import Pirao from './pages/Pirao.jsx'
 
 
 const router = createBrowserRouter([
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
       {
         path:"/selector",
         element:<Pizzaselector/>
+      },
+      {
+        path:"/cardapio/tita_gostos",
+        element:<Tiragosto/>
+      },
+      {
+        path:"/cardapio/pirao",
+        element:<Pirao/>
       }
     ]
   },
