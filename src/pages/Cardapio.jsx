@@ -18,7 +18,7 @@ const Cardapio = () => {
                     <li><Link to="/cardapio/tita_gostos" role="button" className="button-name">Tira Gosto e petiscos</Link></li>
                     <li><Link to="/cardapio/pirao" role="button" className="button-name">Pirão</Link></li>                    
                     <li><Link role="button" className="button-name">Bebidas</Link></li>
-                   
+                    <li><Link to="/cardapip/promocoes" role="button" className="button-name">Pormoções</Link></li>
                 </ul>
             </div>
         </div>

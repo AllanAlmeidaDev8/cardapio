@@ -5,29 +5,47 @@ import './Tiragosto.css';
 const Tiragosto = () => {
     const navigate = useNavigate();
 
-    // Lógica para voltar para a página de cardápio
     const handleBackToCardapio = () => {
         navigate('/cardapio');
     };
 
     const tiraGostoItems = [
-        { nome: 'Batata Frita', valor: 12.00, imagem: '/assets/batata-frita.jpg' },
-        { nome: 'Frango à Passarinho', valor: 20.00, imagem: '/assets/frango-passarinho.jpg' }
+        { nome: 'Carne do Sol mista', valor: 48.00, imagem: './assets/download.jpg' },
+        { nome: 'Carne do Sol', valor: 45.00, imagem: '/assets/frango-passarinho.jpg' },
+        { nome: 'Frango a passarinha', valor: 40.00, imagem: '/assets/frango-passarinho.jpg' },
+        { nome: 'Arrumadinho 45', valor: 45.00, imagem: '/assets/frango-passarinho.jpg' },
+        { nome: 'Espetinho de camarão c/ carne do Sol', valor: 30.00, imagem: '/assets/frango-passarinho.jpg' },
+        { nome: 'Camarão ali óleo', valor: 45.00, imagem: '/assets/frango-passarinho.jpg' },
+        { nome: 'Isca de frango com fritas', valor: 40.00, imagem: '/assets/frango-passarinho.jpg' },
     ];
 
     const tiraGostoChapaItems = [
-        { nome: 'Picanha na Chapa', valor: 45.00, imagem: '/assets/picanha-chapa.jpg' },
-        { nome: 'Linguiça na Chapa', valor: 25.00, imagem: '/assets/linguica-chapa.jpg' }
+        { nome: 'Queijo coalho c/ melaço ou com molho de pizza', valor: 25.00, imagem: '/assets/picanha-chapa.jpg' },
+        { nome: 'Picanha c/ queijo coalho', valor: 55.00, imagem: '/assets/linguica-chapa.jpg' },
+        { nome: 'Picanha acebolada', valor: 55.00, imagem: '/assets/linguica-chapa.jpg' },
+        { nome: 'Picanha c/ fritas', valor: 58.00, imagem: '/assets/linguica-chapa.jpg' },
+        { nome: 'Cupim acebolado', valor: 45.00, imagem: '/assets/linguica-chapa.jpg' },
+        { nome: 'Filé c/ fritas', valor: 50.00, imagem: '/assets/linguica-chapa.jpg' },
+        { nome: 'Filé c/ queijo coalho', valor: 50.00, imagem: '/assets/linguica-chapa.jpg' },
+        { nome: 'Camarão com fritas', valor: 55.00, imagem: '/assets/linguica-chapa.jpg' },
     ];
 
     const petiscosItems = [
-        { nome: 'Calabresa Acebolada', valor: 18.00, imagem: '/assets/calabresa-acebolada.jpg' },
-        { nome: 'Torresmo', valor: 15.00, imagem: '/assets/torresmo.jpg' }
+        { nome: 'Batata Frita', valor: 22.00, imagem: '/assets/batata-frita.jpg' },
+        { nome: 'Batata Mista ao molho da casa', valor: 40.00, imagem: '/assets/frango-passarinho.jpg' },
+        { nome: 'Tabua de frios', valor: 28.00, imagem: '/assets/frango-passarinho.jpg' },
+        { nome: 'Espetinho de camarão', valor: 22.00, imagem: '/assets/frango-passarinho.jpg' },
+        { nome: 'Espetinho de camarão c/ carne do Sol', valor: 30.00, imagem: '/assets/frango-passarinho.jpg' },
+        { nome: 'Caldo de sururu', valor: 14.00, imagem: '/assets/frango-passarinho.jpg' },
+        { nome: 'Caldo de carne seca', valor: 12.00, imagem: '/assets/frango-passarinho.jpg' },
     ];
 
     const porcoesItems = [
-        { nome: 'Porção de Mandioca', valor: 10.00, imagem: '/assets/mandioca.jpg' },
-        { nome: 'Porção de Polenta', valor: 12.00, imagem: '/assets/polenta.jpg' }
+        { nome: 'Farofa', valor: 4.00, imagem: '/assets/mandioca.jpg' },
+        { nome: 'Faladas', valor: 6.00, imagem: '/assets/polenta.jpg' },
+        { nome: 'Pão fatiado', valor: 2.50, imagem: '/assets/polenta.jpg' },
+        { nome: 'Feijão fradinho', valor: 6.00, imagem: '/assets/polenta.jpg' },
+        { nome: 'Meu feijão Tropeiro', valor: 7.00, imagem: '/assets/polenta.jpg' },
     ];
 
     const [carrinho, setCarrinho] = useState([]);
@@ -77,19 +95,27 @@ const Tiragosto = () => {
     };
 
     const enviarWhatsApp = () => {
+        if (!clientData.nome || !clientData.endereco || !clientData.pontoReferencia) {
+            alert("Por favor, preencha todos os campos obrigatórios (Nome, Endereço e Ponto de Referência) antes de enviar o pedido.");
+            return;
+        }
+
         const gerarMensagem = () => {
             return `
-                Nome: ${clientData.nome}\n
-                Endereço: ${clientData.endereco}\n
-                Ponto de Referência: ${clientData.pontoReferencia}\n
-                Forma de Pagamento: ${clientData.formaPagamento}\n
-                Itens: ${carrinho.map(item => `${item.nome} x ${item.quantidade}`).join(', ')}
-                Total: R$ ${calcularTotal()}
+                *Seu Pedido*
+
+Nome: ${clientData.nome}
+Endereço: ${clientData.endereco}
+Itens: ${carrinho.map(item => `${item.nome} x ${item.quantidade}`).join(', ')}
+Ponto de Referência: ${clientData.pontoReferencia}
+Forma de Pagamento: ${clientData.formaPagamento}
+
+Total: R$ ${calcularTotal()}
             `;
         };
 
         const mensagem = gerarMensagem();
-        const telefone = '5571992961630'; // Substitua pelo número de telefone desejado com DDD
+        const telefone = '5571992961630';
         const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
         window.open(url, '_blank');
     };
@@ -102,11 +128,11 @@ const Tiragosto = () => {
             <div className="ista_itens">
                 {tiraGostoItems.map((item, index) => (
                     <label key={index} htmlFor={`tiraGosto-${index}`} className="item-container">
-                        <input type="checkbox" id={`tiraGosto-${index}`} onClick={() => adicionarAoCarrinho(item)} />
+                        <input className='check' type="checkbox" id={`tiraGosto-${index}`} onClick={() => adicionarAoCarrinho(item)} />
                         <span className='iten'>{item.nome}</span>
                         <span className='valor'>R$ {item.valor.toFixed(2)}</span>
                         <span className='img'>
-                            <img src={item.imagem} alt={item.nome} />
+                            {/* <img src={item.imagem} alt={item.nome} /> */}{/*inserir imagem aqui */}
                         </span>
                     </label>
                 ))}
@@ -118,11 +144,11 @@ const Tiragosto = () => {
             <div className="ista_itens">
                 {tiraGostoChapaItems.map((item, index) => (
                     <label key={index} htmlFor={`tiraGostoChapa-${index}`} className="item-container">
-                        <input type="checkbox" id={`tiraGostoChapa-${index}`} onClick={() => adicionarAoCarrinho(item)} />
+                        <input className='check' type="checkbox" id={`tiraGostoChapa-${index}`} onClick={() => adicionarAoCarrinho(item)} />
                         <span className='iten'>{item.nome}</span>
                         <span className='valor'>R$ {item.valor.toFixed(2)}</span>
                         <span className='img'>
-                            <img src={item.imagem} alt={item.nome} />
+                            {/* <img src={item.imagem} alt={item.nome} /> */}{/*inserir imagem aqui*/}
                         </span>
                     </label>
                 ))}
@@ -134,11 +160,11 @@ const Tiragosto = () => {
             <div className="ista_itens">
                 {petiscosItems.map((item, index) => (
                     <label key={index} htmlFor={`petiscos-${index}`} className="item-container">
-                        <input type="checkbox" id={`petiscos-${index}`} onClick={() => adicionarAoCarrinho(item)} />
+                        <input className='check' type="checkbox" id={`petiscos-${index}`} onClick={() => adicionarAoCarrinho(item)} />
                         <span className='iten'>{item.nome}</span>
                         <span className='valor'>R$ {item.valor.toFixed(2)}</span>
                         <span className='img'>
-                            <img src={item.imagem} alt={item.nome} />
+                            {/* <img src={item.imagem} alt={item.nome} /> */}{/*inserir imagem aqui*/}
                         </span>
                     </label>
                 ))}
@@ -150,11 +176,11 @@ const Tiragosto = () => {
             <div className="ista_itens">
                 {porcoesItems.map((item, index) => (
                     <label key={index} htmlFor={`porcoes-${index}`} className="item-container">
-                        <input type="checkbox" id={`porcoes-${index}`} onClick={() => adicionarAoCarrinho(item)} />
+                        <input className='check' type="checkbox" id={`porcoes-${index}`} onClick={() => adicionarAoCarrinho(item)} />
                         <span className='iten'>{item.nome}</span>
                         <span className='valor'>R$ {item.valor.toFixed(2)}</span>
                         <span className='img'>
-                            <img src={item.imagem} alt={item.nome} />
+                            {/* <img src={item.imagem} alt={item.nome} /> */}{/*inserir imagem aqui*/}
                         </span>
                     </label>
                 ))}
@@ -162,75 +188,52 @@ const Tiragosto = () => {
 
             <div className="carrinho">
                 <h2 className='subTitle'>Carrinho</h2>
-                {carrinho.length === 0 ? (
-                    <p>Carrinho vazio</p>
-                ) : (
-                    carrinho.map((item, index) => (
-                        <div key={index} className="carrinho-item">
-                            <span>{item.nome} x {item.quantidade}</span>
-                            <span>R$ {(item.valor * item.quantidade).toFixed(2)}</span>
-                            <button onClick={() => removerDoCarrinho(item)}>Remover</button>
-                        </div>
-                    ))
-                )}
-                <div className="carrinho-total">
-                    <h3>Total: R$ {calcularTotal()}</h3>
-                </div>
+                <ul>
+                    {carrinho.map((item, index) => (
+                        <li key={index}>
+                            {item.nome} x {item.quantidade} - R$ {(item.valor * item.quantidade).toFixed(2)}
+                            <div className="btn">
+                            <button onClick={() => adicionarAoCarrinho(item)}><p>+</p></button>
+                            <button onClick={() => removerDoCarrinho(item)}>-</button>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+                <h4>Total: R$ {calcularTotal()}</h4>
             </div>
 
-            <div className="formulario">
-                <h2 className='subTitle'>Informações do Cliente</h2>
-                <form>
-                    <label>
-                        Nome:
-                        <input
-                            type="text"
-                            name="nome"
-                            value={clientData.nome}
-                            onChange={handleInputChange}
-                            required
-                        />
-                    </label>
-                    <label>
-                        Endereço:
-                        <input
-                            type="text"
-                            name="endereco"
-                            value={clientData.endereco}
-                            onChange={handleInputChange}
-                            required
-                        />
-                    </label>
-                    <label>
-                        Ponto de Referência:
-                        <input
-                            type="text"
-                            name="pontoReferencia"
-                            value={clientData.pontoReferencia}
-                            onChange={handleInputChange}
-                        />
-                    </label>
+            <h3>Informações do Cliente:</h3>
+            <form className='cadastro'>
+                    <label>Nome:</label>
+                    <input className='input' type="text" name="nome" value={clientData.nome} onChange={handleInputChange} required />
+
+                    <label>Endereço:</label>
+                    <input className='input' type="text" name="endereco" value={clientData.endereco} onChange={handleInputChange} required />
+
+                    <label>Ponto de Referência:</label>
+                    <input className='input' type="text" name="pontoReferencia" value={clientData.pontoReferencia} onChange={handleInputChange}
+                    />
+
                     <label>
                         Forma de Pagamento:
-                        <select
+                        <select 
                             name="formaPagamento"
                             value={clientData.formaPagamento}
                             onChange={handleInputChange}
                         >
-                            <option value="Dinheiro">Dinheiro</option>
+                            <option  value="Dinheiro">Dinheiro</option>
                             <option value="Cartão de Crédito">Cartão de Crédito</option>
                             <option value="Cartão de Débito">Cartão de Débito</option>
                         </select>
                     </label>
                 </form>
-                <button onClick={enviarWhatsApp} className="submit-button">
-                    Enviar Pedido
-                </button>
+            <div className="btn">
+                <button onClick={enviarWhatsApp} role="button" className="button-name">Enviar Pedido</button>
+            </div>
+            <div className="btn">
+                <button onClick={handleBackToCardapio} role="button" className="button-name">Voltar ao Cardápio</button>
             </div>
 
-            <button onClick={handleBackToCardapio} className="back-button">
-                Voltar para o Cardápio
-            </button>
         </div>
     );
 }

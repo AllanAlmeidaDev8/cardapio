@@ -13,6 +13,7 @@ import Pizza from './pages/Pizza.jsx'
 import Pizzaselector from './pages/Pizzaselector.jsx'
 import Tiragosto from './pages/Tiragosto.jsx'
 import Pirao from './pages/Pirao.jsx'
+import Promocoes from './pages/Promocoes.jsx'
 
 
 const router = createBrowserRouter([
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
       {
         path:"/cardapio/pirao",
         element:<Pirao/>
+      },
+      {
+        path:"/cardapip/promocoes",
+        element:<Promocoes/>
       }
     ]
   },

@@ -2,29 +2,20 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Pizza.css';
 import './Button.css';
+import './Tiragosto.css';
 
-const Pirao = () => {
+const Promocoes = () => {
     const navigate = useNavigate();
 
+    // Lógica para voltar para a página de cardápio
     const handleBackToCardapio = () => {
         navigate('/cardapio');
     };
 
-    const piraoItems = [
-        { nome: 'Sr turbinado', valor: 99.00, imagem: '/assets/feijao-tropeiro.jpg' },
-        { nome: 'Pirão com camarão', valor: 50.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão com Filé', valor: 50.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão da casa', valor: 60.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão completo', valor: 72.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão individual', valor: 25.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão com frango', valor: 45.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão com carne do sol', valor: 45.00, imagem: '/assets/arroz-grega.jpg' },
+    const promocoesItems = [
+        { nome: 'Pizza dobrada Grande  + Coca-Cola 2L', valor: 45.00, imagem: '/assets/pizza-coca.jpg' },
+        { nome: 'Combo Família (3 pizzas médias)', valor: 90.00, imagem: '/assets/combo-familia.jpg' }
     ];
-
-   /* const piraoChapaItems = [
-        { nome: 'Peito de Frango na Chapa', valor: 30.00, imagem: '/assets/frango-chapa.jpg' },
-        { nome: 'Filezinho de Carne na Chapa', valor: 40.00, imagem: '/assets/carne-chapa.jpg' }
-    ];*/
 
     const [carrinho, setCarrinho] = useState([]);
     const [clientData, setClientData] = useState({
@@ -93,12 +84,12 @@ const Pirao = () => {
     return (
         <div className="container">
             <div>
-                <h2 className='subTitle'>Pirão</h2>
+                <h2 className='subTitle'>Promoções</h2>
             </div>
             <div className="ista_itens">
-                {piraoItems.map((item, index) => (
-                    <label key={index} htmlFor={`pirao-${index}`} className="item-container">
-                        <input className='check' type="checkbox" id={`pirao-${index}`} onClick={() => adicionarAoCarrinho(item)} />
+                {promocoesItems.map((item, index) => (
+                    <label key={index} htmlFor={`promocao-${index}`} className="item-container">
+                        <input className='check' type="checkbox" id={`promocao-${index}`} onClick={() => adicionarAoCarrinho(item)} />
                         <span className='iten'>{item.nome}</span>
                         <span className='valor'>R$ {item.valor.toFixed(2)}</span>
                         <span className='img'>
@@ -107,23 +98,6 @@ const Pirao = () => {
                     </label>
                 ))}
             </div>
-
-
-            {/*<div>
-                <h2 className='subTitle'>Pirão na Chapa</h2>
-            </div>
-            <div className="ista_itens">
-                {piraoChapaItems.map((item, index) => (
-                    <label key={index} htmlFor={`piraoChapa-${index}`} className="item-container">
-                        <input type="checkbox" id={`piraoChapa-${index}`} onClick={() => adicionarAoCarrinho(item)} />
-                        <span className='iten'>{item.nome}</span>
-                        <span className='valor'>R$ {item.valor.toFixed(2)}</span>
-                        <span className='img'>
-                            <img src={item.imagem} alt={item.nome} />
-                        </span>
-                    </label>
-                ))}
-            </div>*/}
 
             <div className="carrinho">
                 <h2 className='subTitle'>Carrinho</h2>
@@ -184,6 +158,6 @@ const Pirao = () => {
             </button>
         </div>
     );
-}
+};
 
-export default Pirao;
+export default Promocoes;
