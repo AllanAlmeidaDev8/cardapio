@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Pizza.css';
 import './Button.css';
+import imagen from './img/pzm.jpg';
 
 const Pirao = () => {
     const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Pirao = () => {
     };
 
     const piraoItems = [
-        { nome: 'Sr turbinado', valor: 99.00, imagem: '/assets/feijao-tropeiro.jpg' },
+        { nome: 'Sr turbinado', valor: 99.00, imagem: './img/pzm.jpg' },
         { nome: 'Pirão com camarão', valor: 50.00, imagem: '/assets/arroz-grega.jpg' },
         { nome: 'Pirão com Filé', valor: 50.00, imagem: '/assets/arroz-grega.jpg' },
         { nome: 'Pirão da casa', valor: 60.00, imagem: '/assets/arroz-grega.jpg' },
@@ -94,6 +95,7 @@ const Pirao = () => {
         <div className="container">
             <div>
                 <h2 className='subTitle'>Pirão</h2>
+                <img src={ imagen } alt=""  width={100}/>
             </div>
             <div className="ista_itens">
                 {piraoItems.map((item, index) => (
@@ -102,7 +104,7 @@ const Pirao = () => {
                         <span className='iten'>{item.nome}</span>
                         <span className='valor'>R$ {item.valor.toFixed(2)}</span>
                         <span className='img'>
-                            {/*<img src={item.imagem} alt={item.nome} />*/}
+                            {/* <img src={item.imagem} alt={item.nome} /> */}
                         </span>
                     </label>
                 ))}
