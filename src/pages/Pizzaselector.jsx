@@ -36,8 +36,8 @@ const Pizzaselector = ({ tipo, onSelect }) => {
             { nome: "Carne Seca", ingredientes: ["Carne Seca", "Cebola", "Catupiry"] },
         ],
         PizzaTop: [
-            { nome: "Camarão", ingredientes: ["Camarão", "Mussarela", "Orégano"] },
-            { nome: "Picanha", ingredientes: ["Picanha", "Cebola", "Mussarela"] },
+            { nome: "Camarão", ingredientes: ["Camarão", "Mussarela", "Orégano", "Molho de tomate", "Azeitona"] },
+            { nome: "Picanha", ingredientes: ["Picanha", "Cebola", "Mussarela", "Azeitona"] },
             { nome: "Bacalhau", ingredientes: ["Bacalhau", "Cebola", "Azeitona"] },
             { nome: "Salame", ingredientes: ["Salame", "Mussarela", "Orégano"] },
             { nome: "Camarão com Palmito", ingredientes: ["Camarão", "Palmito", "Mussarela"] },
