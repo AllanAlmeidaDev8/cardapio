@@ -38,7 +38,7 @@ const router = createBrowserRouter([
         element:<Pizzaselector/>
       },
       {
-        path:"/cardapio/tita_gostos",
+        path:"/cardapio/tira_gostos",
         element:<Tiragosto/>
       },
       {
