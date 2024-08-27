@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Tiragosto.css';
+import './Button.css';
 
 const Tiragosto = () => {
     const navigate = useNavigate();
