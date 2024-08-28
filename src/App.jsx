@@ -11,7 +11,7 @@ function App() {
 
       </div> 
       <div className="intro">
-      <h1 className="title">Seja vindo</h1>
+      <h1 className="title">Seja bem vindo</h1>
       <p>Ao Sr Pizza Bar</p>
       </div>
       

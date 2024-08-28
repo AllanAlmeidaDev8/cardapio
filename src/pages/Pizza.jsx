@@ -44,9 +44,9 @@ const Pizza = () => {//
     };
 
     const valores = {
-        PizzaTop: { Media: 40, Grande: 50, Familia: 68 },
-        PizzaEspecial: { Media: 34, Grande: 40, Familia: 59 },
-        PizzaTradicional: { Media: 30, Grande: 39, Familia: 56 }
+        PizzaTop: { Media: 38, Grande: 48, Familia: 68 },
+        PizzaEspecial: { Media: 32, Grande: 42, Familia: 58 },
+        PizzaTradicional: { Media: 28, Grande: 38, Familia: 55 }
     };
 
     const valorPizza = tipo && tamanho ? valores[tipo][tamanho] : 0;

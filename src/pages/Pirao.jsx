@@ -12,7 +12,7 @@ const Pirao = () => {
     };
 
     const piraoItems = [
-        { nome: 'Sr turbinado', valor: 99.00, imagem: './img/pzm.jpg' },
+        { nome: 'Sr turbinado', valor: 110.00, imagem: './img/pzm.jpg' },
         { nome: 'Pirão com camarão', valor: 50.00, imagem: '/assets/arroz-grega.jpg' },
         { nome: 'Pirão com Filé', valor: 50.00, imagem: '/assets/arroz-grega.jpg' },
         { nome: 'Pirão da casa', valor: 60.00, imagem: '/assets/arroz-grega.jpg' },
