@@ -13,8 +13,10 @@ const Promocoes = () => {
     };
 
     const promocoesItems = [
-        { nome: 'Pizza dobrada Grande  + Coca-Cola 2L', valor: 45.00, imagem: '/assets/pizza-coca.jpg' },
-        { nome: 'Combo Família (3 pizzas médias)', valor: 90.00, imagem: '/assets/combo-familia.jpg' }
+        { nome: 'Pizza dobrada Grande ', valor: 56.00, imagem: '/assets/pizza-coca.jpg' },
+        { nome: 'Combo Família (3 pizzas médias) + Refri 2L', valor: 80.00, imagem: '/assets/combo-familia.jpg' },
+        { nome: 'Rosca dobrada (Frutas da Época) Tradicional' , valor: 18.00, imagem: '/assets/combo-familia.jpg' },
+        { nome: 'Rosca dobrada (Frutas da Época) Especial' , valor: 22.00, imagem: '/assets/combo-familia.jpg' },
     ];
 
     const [carrinho, setCarrinho] = useState([]);

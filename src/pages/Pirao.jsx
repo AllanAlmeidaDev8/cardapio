@@ -13,13 +13,13 @@ const Pirao = () => {
 
     const piraoItems = [
         { nome: 'Sr turbinado', valor: 110.00, imagem: './img/pzm.jpg' },
-        { nome: 'Pirão com camarão', valor: 50.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão com Filé', valor: 50.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão da casa', valor: 60.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão completo', valor: 72.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão individual', valor: 25.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão com frango', valor: 45.00, imagem: '/assets/arroz-grega.jpg' },
-        { nome: 'Pirão com carne do sol', valor: 45.00, imagem: '/assets/arroz-grega.jpg' },
+        { nome: 'Pirão de aipim com camarão', valor: 52.00, imagem: '/assets/arroz-grega.jpg' },
+        { nome: 'Pirão de aipim com Filé', valor: 52.00, imagem: '/assets/arroz-grega.jpg' },
+        { nome: 'Pirão de aipim da casa', valor: 62.00, imagem: '/assets/arroz-grega.jpg' },
+        { nome: 'Pirão de aipim completo', valor: 75.00, imagem: '/assets/arroz-grega.jpg' },
+        { nome: 'Pirão de aipim com frango', valor: 45.00, imagem: '/assets/arroz-grega.jpg' },
+        { nome: 'Pirão de aipim com carne do sol', valor: 45.00, imagem: '/assets/arroz-grega.jpg' },
+        { nome: 'Pirão de aipim individual (Frango ou Carne)', valor: 25.00, imagem: '/assets/arroz-grega.jpg' },
     ];
 
    /* const piraoChapaItems = [
