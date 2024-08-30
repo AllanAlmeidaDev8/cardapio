@@ -1,16 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-
+.intro{
+    margin-top: 50px;
+}
+legend{
+    font-size: 1.5em;
+    background-color: rgb(253, 202, 108);
+    position: relative;
+    top: -10px;
+    padding: 2px 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(0, 140, 255);
+}
 .intro p{
     color: white;
 }
+.resumo_text{
+    text-align: justify;
+    padding: 20px;
+    line-height: 2;
+}
+.resumo_text strong{
+    font-size: 20px;
+}
 .folder {
-    background-image: url(/public/folder.png);
-    background-size: contain;
+    background-image: url(/src/pages/img/pz01.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
     height: 30vh;
-}
+    background-position: center;
+  }
+  .logo{
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-10%);
+    box-shadow: 5px 5px 5px black;
+  }
 
 .box_glass img {
     width: 204px;
@@ -29,17 +58,14 @@ main {
 }
 
 .intro {
-    margin-top: 100px;
-    padding: 20px;
     font-family: "Lilita One", sans-serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    font-size: 3em;
-}
-.intro h1 p{
-    color: white !important;
-}
+    font-size: 2em;
+    padding: 10px;
+  }
+
 
 .home {
     color: rgb(255, 255, 255);

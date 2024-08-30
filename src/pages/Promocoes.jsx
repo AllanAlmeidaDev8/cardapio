@@ -13,10 +13,28 @@ const Promocoes = () => {
     };
 
     const promocoesItems = [
-        { nome: 'Pizza dobrada Grande ', valor: 56.00, imagem: '/assets/pizza-coca.jpg' },
-        { nome: 'Combo Família (3 pizzas médias) + Refri 2L', valor: 80.00, imagem: '/assets/combo-familia.jpg' },
-        { nome: 'Rosca dobrada (Frutas da Época) Tradicional' , valor: 18.00, imagem: '/assets/combo-familia.jpg' },
-        { nome: 'Rosca dobrada (Frutas da Época) Especial' , valor: 22.00, imagem: '/assets/combo-familia.jpg' },
+        { 
+            nome: 'Pizza dobrada Grande ', 
+            valor: 56.00, 
+            imagem: '/assets/pizza-coca.jpg',
+            ingrediente:'Português, calabresa e 4 queijos',
+         },
+        { 
+            nome: 'Combo Família (3 pizzas médias) + Refri 2L', 
+            valor: 80.00,
+            ingrediente:'Português, calabresa e 4 queijos', 
+            imagem: '/assets/combo-familia.jpg' 
+        },
+        { 
+            nome: 'Rosca dobrada  Tradicional' , 
+            valor: 18.00, 
+            ingrediente:'(Frutas da Época)', 
+            imagem: '/assets/combo-familia.jpg' },
+            
+        { nome: 'Rosca dobrada (Frutas da Época) Especial' , 
+            valor: 22.00,
+            ingrediente:'(Morango e Kiwí da Época)', 
+            imagem: '/assets/combo-familia.jpg' },
     ];
 
     const [carrinho, setCarrinho] = useState([]);
@@ -92,8 +110,12 @@ const Promocoes = () => {
                 {promocoesItems.map((item, index) => (
                     <label key={index} htmlFor={`promocao-${index}`} className="item-container">
                         <input className='check' type="checkbox" id={`promocao-${index}`} onClick={() => adicionarAoCarrinho(item)} />
-                        <span className='iten'>{item.nome}</span>
+                        <div className="iten_ingrediente">
+                            <span className='iten'>{item.nome}</span>
+                            <span className='ingredientes'>{item.ingrediente}</span>
+                        </div>
                         <span className='valor'>R$ {item.valor.toFixed(2)}</span>
+                        
                         <span className='img'>
                             {/*<img src={item.imagem} alt={item.nome} />*/}
                         </span>

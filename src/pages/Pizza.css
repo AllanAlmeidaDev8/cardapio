@@ -30,6 +30,11 @@ fieldset{
     background-color: rgba(255, 215, 141, 0.568);
     height: 100px;
     padding: 10px;
+    white-space: normal;
+}
+.ingrediente_list{
+    white-space: normal;
+    
 }
 .checkbox{
    position: absolute;

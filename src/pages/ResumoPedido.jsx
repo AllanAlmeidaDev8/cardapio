@@ -25,19 +25,25 @@ Forma de Pagamento: ${formaPagamento ? formaPagamento.charAt(0).toUpperCase() + 
     };
     return (
         <div className="resumo_pedido">
-            <h2>Resumo do Pedido</h2>
-            <p><strong>Tipo de Pizza</strong> {tipo ? tipo.replace('Pizza', '') : 'Nenhum'}</p>
-            <p><strong>Tamanho:</strong> {tamanho}</p>
-            <p><strong>Sabores:</strong> {sabores.length > 0 ? sabores.join(', ') : 'Nenhum'}</p>
-            <p><strong>Valor:</strong> R$ {valorPizza.toFixed(2)}</p>
-            <p><strong>Nome:</strong> {nome}</p>
-            <p><strong>Endereço:</strong> {endereco}</p>
-            <p><strong>Ponto de Referência:</strong> {pontoReferencia}</p>
-            <p><strong>Forma de Pagamento:</strong> {formaPagamento ? formaPagamento.charAt(0).toUpperCase() + formaPagamento.slice(1) : 'Não selecionada'}</p>
-            <button onClick={enviarWhatsApp}>Confirmar Pedido</button>
+            <h2 className='subTitle'>Resumo do Pedido</h2>
+            <div className="resumo_text">
+                <p>
+                    <strong>Tipo de Pizza:</strong> {tipo ? tipo.replace('Pizza', '') : 'Nenhum'} <br />
+                    <strong>Tamanho:</strong> {tamanho} <br />
+                    <strong>Sabores:</strong> {sabores.length > 0 ? sabores.join(', ') : 'Nenhum'} <br />
+                    <strong>Valor:</strong> R$ {valorPizza.toFixed(2)} <br />
+                    <strong>Nome:</strong> {nome} <br />
+                    <strong>Endereço:</strong> {endereco} <br />
+                    <strong>Ponto de Referência:</strong> {pontoReferencia} <br />
+                    <strong>Forma de Pagamento:</strong> {formaPagamento ? formaPagamento.charAt(0).toUpperCase() + formaPagamento.slice(1) : 'Não selecionada'}
+                </p>
+            </div>
+            <div className="btn">
+                <button onClick={enviarWhatsApp} className='button-name '>Confirmar Pedido</button>
+            </div>
         </div>
     );
- 
+
 };
 
 export default ResumoPedido;

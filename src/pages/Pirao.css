@@ -1,0 +1,48 @@
+/* Estilização do container de cada item */
+.item-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Estilização para a caixa de itens que contém o nome, valor e ingredientes */
+  .box_itens {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  
+  /* Nome do item e valor na mesma linha */
+  .iten,
+  .valor {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Exibição da lista de ingredientes */
+  .ingredientes {
+    margin-top: 5px;
+    font-size: 10px;
+    color: #666;
+    display: flex;
+  }
+  
+  /* Estilização da imagem */
+  .img img {
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  /* Checkbox */
+  .check {
+    margin-right: 10px;
+  }
+  

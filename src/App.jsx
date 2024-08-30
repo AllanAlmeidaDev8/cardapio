@@ -1,4 +1,5 @@
 import { Outlet,Link } from 'react-router-dom'
+import Logo from './pages/img/Logo.png';
 import './App.css'
 
 function App() {
@@ -8,11 +9,11 @@ function App() {
     <div className="conteiner_app folder">
       <div className="folder">
         
-
+        <img src={Logo} alt="Logo" className='logo' />
       </div> 
       <div className="intro">
       <h1 className="title">Seja bem vindo</h1>
-      <p>Ao Sr Pizza Bar</p>
+      <p>A Sr Pizza Bar</p>
       </div>
       
       <main>
