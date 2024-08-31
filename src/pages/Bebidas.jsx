@@ -45,7 +45,7 @@ const Bebidas = () => {
 
     const bebidasCerveja = [
         { nome: 'Cerveja heineken long neck', valor: 9.0, imagem: imgHeinLog },
-        
+
         { nome: 'Cerveja stella artois', valor: 8.0, imagem: imgCervSet },
         { nome: 'Malzebier Lata', valor: 6.0, imagem: imgMalzBier },
         { nome: 'Imperio Long Neck', valor: 8.0, imagem: imgSem },
@@ -60,19 +60,19 @@ const Bebidas = () => {
     ];
 
     const bebidasVinhos = [
-        { nome: 'Vinho Tinto', valor: 38.0, imagem: 'link-para-imagem-vinho-tinto' },
-        
+        { nome: 'Vinho Tinto', valor: 38.0, imagem: imgSem },
+
     ];
 
     const bebidasQuentes = [
-        { nome: 'Café', valor: 5.0, imagem: 'link-para-imagem-cafe' },
-        { nome: 'Chá', valor: 4.0, imagem: 'link-para-imagem-cha' },
+        // { nome: 'Café', valor: 5.0, imagem: 'link-para-imagem-cafe' },
+        // { nome: 'Chá', valor: 4.0, imagem: 'link-para-imagem-cha' },
     ];
 
     const bebidasCoqueteis = [
-        { nome: 'Caipirinha', valor: 8.0, imagem: 'link-para-imagem-caipirinha' },
-        { nome: 'Rosca tradicional', valor: 10.0, imagem: 'link-para-imagem-mojito' },
-        { nome: 'Rosca Especial Morango e Kiuí', valor: 12.0, imagem: 'link-para-imagem-mojito' },
+        { nome: 'Caipirinha', valor: 8.0, imagem: imgSem },
+        { nome: 'Rosca tradicional', valor: 10.0, imagem: imgSem },
+        { nome: 'Rosca Especial Morango e Kiuí', valor: 12.0, imagem: imgSem },
     ];
 
     const [carrinho, setCarrinho] = useState([]);
@@ -278,17 +278,22 @@ Agradecemos a preferência! Aguardamos sua visita novamente.
                 </div>
             </div>
 
-           
+
             <div className="carrinho">
                 <h3 className='subTitle'>Carrinho</h3>
                 {carrinho.length === 0 ? (
                     <p>Seu carrinho está vazio</p>
                 ) : (
-                    <ul>
+                    <ul >
                         {carrinho.map((item, index) => (
-                            <li key={index}>
+                            <li key={index} className='list-add'>
                                 {item.nome} x {item.quantidade} - R$ {item.valor.toFixed(2)}
-                                <button onClick={() => removerDoCarrinho(item)}>Remover</button>
+                                <div className="buttons-container">
+                                    <div className='buttons'>
+                                        <button className='add-btn' onClick={() => adicionarAoCarrinho(item)}>+</button>
+                                        <button className='add-btn remov' onClick={() => removerDoCarrinho(item)}>-</button>
+                                    </div>
+                                </div>
                             </li>
                         ))}
                     </ul>
@@ -298,30 +303,30 @@ Agradecemos a preferência! Aguardamos sua visita novamente.
 
 
             <form action="" className="cadastro">
-                
-                    <h3>Dados do Cliente</h3>
-                    <label htmlFor="nome">Nome:</label>
 
-                    <input type="text" id='nome' className='input' name="nome" placeholder="Nome" value={clientData.nome} onChange={handleInputChange}  required />
+                <h3>Dados do Cliente</h3>
+                <label htmlFor="nome">Nome:</label>
 
-                    <label htmlFor="end">Endereço:</label>
-                    <input type="text" id='end' className='input' name="endereco" placeholder="Endereço" value={clientData.endereco} onChange= {handleInputChange} required />
+                <input type="text" id='nome' className='input' name="nome" placeholder="Nome" value={clientData.nome} onChange={handleInputChange} required />
 
-                    <label htmlFor="pontRef">Ponto de Referência:</label>
-                    <input type="text" id='pontRef' className='input' name="pontoReferencia"  placeholder="Ponto de Referência" alue={clientData.pontoReferencia} onChange={handleInputChange} required />
+                <label htmlFor="end">Endereço:</label>
+                <input type="text" id='end' className='input' name="endereco" placeholder="Endereço" value={clientData.endereco} onChange={handleInputChange} required />
 
-                    <select
-                        name="formaPagamento"
-                        value={clientData.formaPagamento}
-                        onChange={handleInputChange}
-                    >
-                        <option value="Dinheiro">Dinheiro</option>
-                        <option value="Pix">Pix</option>
-                        <option value="Cartão de debito">Cartão de debito</option>
-                        <option value="Cartão de credito">Cartão de credito</option>
-                    </select>
+                <label htmlFor="pontRef">Ponto de Referência:</label>
+                <input type="text" id='pontRef' className='input' name="pontoReferencia" placeholder="Ponto de Referência" alue={clientData.pontoReferencia} onChange={handleInputChange} required />
+
+                <select
+                    name="formaPagamento"
+                    value={clientData.formaPagamento}
+                    onChange={handleInputChange}
+                >
+                    <option value="Dinheiro">Dinheiro</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Cartão de debito">Cartão de debito</option>
+                    <option value="Cartão de credito">Cartão de credito</option>
+                </select>
             </form>
-           
+
             <div className="btn">
                 <button className="button-name" onClick={enviarWhatsApp}>
                     Finalizar Pedido

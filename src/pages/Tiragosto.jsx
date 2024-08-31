@@ -4,22 +4,31 @@ import './Tiragosto.css';
 import './Button.css';
 import './Pirao.css';
 import Bebidas from './Bebidas';
-import imgCarmis from '../assets/imgPratos/Carne-do-sol-mista.jpg'
-import imgArru from '../assets/imgPratos/arrumadinho2.jpg'
-import imgCarnSol from '../assets/imgPratos/carnesol.webp'
-import imgFranPass from '../assets/imgPratos/frango-a-passarinha.jpg'
-import imgCamAl from '../assets/imgPratos/Camarão-Alho-e-oleo.webp'
-import imgCarnFrl from '../assets/imgPratos/carne-do-sol-fritas.webp.jpg'
-import imgCodFrl from '../assets/imgPratos/codorna.webp.jpg'
-import imgCamFri from '../assets/imgPratos/camarao-com-fritas.webp'
-import imgIscFranFri from '../assets/imgPratos/isca_de_frango.webp' 
-import imgQueiMe from '../assets/imgPratos/queijo-melaco.jpg'                  
-import imgQueiPic from '../assets/imgPratos/picanhacomqueijo.webp'                  
-import imgQPicFri from '../assets/imgPratos/picanha-com-fritas.webp.jpg'                  
-import imgQPicAc from '../assets/imgPratos/picanha-acebolada.png'                  
-import imgCupiAc from '../assets/imgPratos/Como-fazer-bife-de-cupim.jpg'                  
-import imgFilFri from '../assets/imgPratos/file-com-fritas.webp.jpg'                  
-import imgFilQuei from '../assets/imgPratos/fileCoquejo.webp'                  
+import imgSem from '../assets/semImagen.webp';
+import imgCarmis from '../assets/imgPratos/Carne-do-sol-mista.jpg';
+import imgArru from '../assets/imgPratos/arrumadinho2.jpg';
+import imgCarnSol from '../assets/imgPratos/carnesol.webp';
+import imgFranPass from '../assets/imgPratos/frango-a-passarinha.jpg';
+import imgCamAl from '../assets/imgPratos/Camarão-Alho-e-oleo.webp';
+import imgCarnFrl from '../assets/imgPratos/carne-do-sol-fritas.webp.jpg';
+import imgCodFrl from '../assets/imgPratos/codorna.webp.jpg';
+import imgCamFri from '../assets/imgPratos/camarao-com-fritas.webp';
+import imgIscFranFri from '../assets/imgPratos/isca_de_frango.webp'; 
+import imgQueiMe from '../assets/imgPratos/queijo-melaco.jpg';                  
+import imgQueiPic from '../assets/imgPratos/picanhacomqueijo.webp';                  
+import imgQPicFri from '../assets/imgPratos/picanha-com-fritas.webp.jpg';                  
+import imgQPicAc from '../assets/imgPratos/picanha-acebolada.png';                  
+import imgCupiAc from '../assets/imgPratos/Como-fazer-bife-de-cupim.jpg';                  
+import imgFilFri from '../assets/imgPratos/file-com-fritas.webp.jpg';                  
+import imgFilQuei from '../assets/imgPratos/fileCoquejo.webp';                  
+import imgBat from '../assets/imgPratos/batata1.webp';                  
+import imgBatSr from '../assets/imgPratos/batataSr.png';                  
+import imgTabFri from '../assets/imgPratos/Tabua_queijos_frios.webp';                  
+import imgKitSal from '../assets/imgPratos/kitSalgados.webp';                  
+import imgEspCam from '../assets/imgPratos/espetinhCam.jpeg';                  
+import imgEspCar from '../assets/imgPratos/espetinhCar.jpeg';                  
+import imgCalSur from '../assets/imgPratos/sururu.jpeg';                  
+import imgCalCar from '../assets/imgPratos/calsoCarne.jpeg';                  
 
 const Tiragosto = () => {
     const navigate = useNavigate();
@@ -134,49 +143,49 @@ const Tiragosto = () => {
         {
             nome: 'Batata Frita',
             valor: 22.0,
-            imagem: '/assets/batata-frita.jpg',
+            imagem: imgBat,
             ingredientes: [],
         },
         {
             nome: 'Batata Sr',
             valor: 45.0,
-            imagem: '/assets/frango-passarinho.jpg',
+            imagem: imgBatSr,
             ingredientes: ['Batata', 'Queijo', 'Bacon'],
         },
         {
             nome: 'Tabua de frios',
             valor: 25.0,
-            imagem: '/assets/frango-passarinho.jpg',
+            imagem: imgTabFri,
             ingredientes: ['Queijos', 'Salames', 'Azeitonas'],
         },
         {
             nome: 'Kit Salgados',
             valor: 28.0,
-            imagem: '/assets/frango-passarinho.jpg',
-            ingredientes: ['Coxinhas', 'Kibes', 'Empadas'],
+            imagem: imgKitSal,
+            ingredientes: ['Coxinhas', 'Kibes', 'Pasteis'],
         },
         {
             nome: 'Espetinho de camarão',
             valor: 12.0,
-            imagem: '/assets/frango-passarinho.jpg',
-            ingredientes: ['Camarão', 'Tempero especial'],
+            imagem: imgEspCam,
+            ingredientes: [],
         },
         {
             nome: 'Espetinho carne',
             valor: 10.0,
-            imagem: '/assets/frango-passarinho.jpg',
-            ingredientes: ['Carne', 'Tempero especial'],
+            imagem: imgEspCar,
+            ingredientes: [],
         },
         {
             nome: 'Caldo de sururu',
             valor: 14.0,
-            imagem: '/assets/frango-passarinho.jpg',
+            imagem: imgCalSur,
             ingredientes: ['Sururu', 'Coentro', 'Alho'],
         },
         {
             nome: 'Caldo de carne seca',
             valor: 12.0,
-            imagem: '/assets/frango-passarinho.jpg',
+            imagem: imgCalCar,
             ingredientes: ['Carne seca', 'Batata', 'Coentro'],
         },
     ];
