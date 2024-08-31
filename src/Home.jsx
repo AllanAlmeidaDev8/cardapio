@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div>
         <div className='conteiner_top'>
-            <h2>Como eu posso te ajudar</h2>            
+            <h2>Como posso te ajudar!</h2>            
             <Link to='/cardapio' role="button" className="button-name">Cardapio</Link>
         </div>
     </div>
