@@ -1,5 +1,5 @@
 import { Outlet,Link } from 'react-router-dom'
-
+import Logo from '../src/assets/logo.png';
 import './App.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="conteiner_app folder">
       <div className="folder">
-        
+        <img src={Logo} alt="logo" className=' logo' />
         
       </div> 
       <div className="intro">
