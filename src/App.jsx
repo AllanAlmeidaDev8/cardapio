@@ -1,5 +1,5 @@
 import { Outlet,Link } from 'react-router-dom'
-import Logo from './pages/img/Logo.png';
+// import Logo from './pages/img/Logo.png';
 import './App.css'
 
 function App() {
