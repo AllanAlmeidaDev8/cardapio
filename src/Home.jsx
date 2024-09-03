@@ -7,13 +7,15 @@ import './pages/Button.css';
 
 
 
+
 const Home = () => {
   return (
     <div>
         <div className='conteiner_top'>
-            <h2>Como posso te ajudar!</h2>            
+            <h2>Faça o seu Pedido Aqui</h2>            
             <Link to='/cardapio' role="button" className="button-name">Cardapio</Link>
         </div>
+        
     </div>
   )
 }

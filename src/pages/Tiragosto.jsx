@@ -29,6 +29,11 @@ import imgEspCam from '../assets/imgPratos/espetinhCam.jpeg';
 import imgEspCar from '../assets/imgPratos/espetinhCar.jpeg';                  
 import imgCalSur from '../assets/imgPratos/sururu.jpeg';                  
 import imgCalCar from '../assets/imgPratos/calsoCarne.jpeg';                  
+import imgFeiTro from '../assets/imgPratos/feijaoTropeiro.jpg';                  
+import imgFrad from '../assets/imgPratos/fradinho.jpg';                  
+import imgPaoFat from '../assets/imgPratos/paofatiado.jpg';                  
+import imgSald from '../assets/imgPratos/vinagrete.jpg';                  
+import imgFarof from '../assets/imgPratos/farofa.jpg';                  
 
 const Tiragosto = () => {
     const navigate = useNavigate();
@@ -156,7 +161,7 @@ const Tiragosto = () => {
             nome: 'Tabua de frios',
             valor: 25.0,
             imagem: imgTabFri,
-            ingredientes: ['Queijos', 'Salames', 'Azeitonas'],
+            ingredientes: ['Queijo Reino', 'Salames', 'Azeitonas','Gorgonzola','Peito de peru','Queijo prato'],
         },
         {
             nome: 'Kit Salgados',
@@ -191,14 +196,25 @@ const Tiragosto = () => {
     ];
 
     const porcoesItems = [
-        { nome: 'Farofa', valor: 4.0, imagem: '/assets/mandioca.jpg', ingredientes: [] },
-        { nome: 'Salada Vinagrete', valor: 6.0, imagem: '/assets/polenta.jpg', ingredientes: [] },
-        { nome: 'Pão fatiado', valor: 2.5, imagem: '/assets/polenta.jpg', ingredientes: [] },
-        { nome: 'Feijão fradinho', valor: 6.0, imagem: '/assets/polenta.jpg', ingredientes: [] },
+        { nome: 'Farofa', valor: 4.0, imagem: imgFarof, ingredientes: [] },
+        { 
+            nome: 'Salada Vinagrete', 
+            valor: 6.0, 
+            imagem: imgSald,
+             ingredientes: [] },
+        { 
+            nome: 'Pão fatiado', 
+            valor: 2.5, 
+            imagem: imgPaoFat, 
+            ingredientes: [] },
+        { 
+            nome: 'Feijão fradinho', 
+            valor: 6.0, imagem: imgFrad, 
+            ingredientes: [] },
         {
-            nome: 'Meu feijão Tropeiro',
+            nome: 'Feijão Tropeiro',
             valor: 8.0,
-            imagem: '/assets/polenta.jpg',
+            imagem: imgFeiTro,
             ingredientes: ['Feijão', 'Farofa', 'Linguiça', 'Ovos'],
         },
     ];
