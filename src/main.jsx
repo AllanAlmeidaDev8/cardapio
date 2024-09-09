@@ -15,6 +15,7 @@ import Tiragosto from './pages/Tiragosto.jsx'
 import Pirao from './pages/Pirao.jsx'
 import Promocoes from './pages/Promocoes.jsx'
 import Bebidas from './pages/Bebidas.jsx'
+import QRcodeCardapio from './pages/QRcodeCardapio.jsx'
 
 
 const router = createBrowserRouter([
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path:"/qrcardapio",
+    element:<QRcodeCardapio/>
+  }
 ]);
 
 createRoot(document.getElementById('root')).render(

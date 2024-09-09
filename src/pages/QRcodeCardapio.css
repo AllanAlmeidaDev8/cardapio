@@ -1,0 +1,16 @@
+main{
+    text-align: justify !important;
+    padding: 10px;
+}
+.title_box{
+    text-align: left;
+    padding: 20px;
+}
+.title_box h2{
+    padding: 10px;
+}
+.text_box{
+    text-align: left;
+    padding: 10;
+    line-height: 2;
+}
