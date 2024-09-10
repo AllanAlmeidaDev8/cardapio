@@ -1,15 +1,15 @@
-main{
+.main-cardapio{
     text-align: justify !important;
     padding: 10px;
 }
-.title_box{
+.title_box2{
     text-align: left;
     padding: 20px;
 }
-.title_box h2{
+.title_box2 h2{
     padding: 10px;
 }
-.text_box{
+.text_box2{
     text-align: left;
     padding: 10;
     line-height: 2;
