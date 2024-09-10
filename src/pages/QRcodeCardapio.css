@@ -7,6 +7,7 @@
 }
 
 .main-cardapio h2 {
+    
     margin: 0 auto;
     margin-bottom: 0px;
     text-align: center;
@@ -17,15 +18,17 @@
 
 .title_box {
     padding: 10px;
+   text-align: center;
+    line-height: 2;  
 }
 
-.title_box {
-    text-align: center;
-    line-height: 2;
+.title_box p {
+    margin: 0 auto;
+    
 }
 
 .title_box span {
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 5px;
     font-family: "Bungee Tint", sans-serif;
     font-weight: 400;

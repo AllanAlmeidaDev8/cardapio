@@ -130,7 +130,7 @@ const QRcodeCardapio = () => {
                 <div>
                 <div className="title_box">
                         <h2>PIZZAS TOP</h2>
-                        <p><span>M</span> R$36.00, <span>G</span> R$45.00, <span>F </span>R$60.00</p>
+                        <p><span>M</span> R$36.00, <span>G</span> R$45.00, <span>F</span> R$60.00</p>
                     </div>
                         <div className='text_box'>
                             <ul>
