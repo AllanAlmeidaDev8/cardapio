@@ -25,7 +25,9 @@ function App() {
         <div>
           <h3 style={
             {
-              color: 'silver'
+              color: 'silver',
+              padding: '10px',
+              paddingTop: '20px'
             }
           }>Siga-nos em?</h3>
         </div>
@@ -33,7 +35,7 @@ function App() {
           {
             display: 'flex',
             justifyContent: 'space-evenly',
-            padding: '20px',
+            padding: '10px',
             paddingBottom: '10px',
             alignItems: 'center'
           }

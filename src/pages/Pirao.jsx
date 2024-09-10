@@ -13,6 +13,8 @@ import imagemPfrngo from '../assets/imgPratos/aipimfrango.jpeg';
 
 
 
+
+
 const Pirao = () => {
     const navigate = useNavigate();
 
@@ -25,7 +27,7 @@ const Pirao = () => {
             nome: 'Sr turbinado',
             valor: 110.0,
             imagem: imagemTurb,
-            ingredientes: ['Aipim','Carne do sol', 'Calabresa','Camarão','Fumeiro', 'Queijo Coalho']
+            ingredientes: ['Aipim', 'Carne do sol', 'Calabresa', 'Camarão', 'Fumeiro', 'Queijo Coalho']
         },
         {
             nome: 'Pirão de aipim com camarão',
@@ -49,7 +51,7 @@ const Pirao = () => {
             nome: 'Pirão de aipim completo',
             valor: 75.0,
             imagem: imagemComp,
-            ingredientes: ['Aipim', 'Frango', 'Camarão', 'Carne do sol' ,'Calabresa', 'Salada']
+            ingredientes: ['Aipim', 'Frango', 'Camarão', 'Carne do sol', 'Calabresa', 'Salada']
         },
         {
             nome: 'Pirão de aipim com frango',
@@ -67,9 +69,9 @@ const Pirao = () => {
             nome: 'Pirão de aipim individual (Frango ou Carne)',
             valor: 25.0,
             imagem: imagemPfrngo,
-            ingredientes: [ 'Frango ou Carne']
+            ingredientes: ['Frango ou Carne']
         },
-        
+
     ];
 
     const [carrinho, setCarrinho] = useState([]);
@@ -165,15 +167,15 @@ Itens Selecionado - *Pirão*
             <div className="lista_pirao">
                 {piraoItems.map((item, index) => (
                     <label key={index} htmlFor={`pirao-${index}`} className="item-container">
-                       <div className="box_itens">
-                       <input className="check" type="checkbox" id={`pirao-${index}`} onClick={() => adicionarAoCarrinho(item)} />
-                        <span className="iten">{item.nome}</span>
-                        <span className="valor">R$ {item.valor.toFixed(2)}</span>
-                       
-                        <p className="ingredientes">
-                             {item.ingredientes.join(', ')}
-                        </p>
-                       </div>
+                        <div className="box_itens">
+                            <input className="check" type="checkbox" id={`pirao-${index}`} onClick={() => adicionarAoCarrinho(item)} />
+                            <span className="iten">{item.nome}</span>
+                            <span className="valor">R$ {item.valor.toFixed(2)}</span>
+
+                            <p className="ingredientes">
+                                {item.ingredientes.join(', ')}
+                            </p>
+                        </div>
                         <span className="img">
                             <img src={item.imagem} alt={item.nome} />
                         </span>
@@ -246,8 +248,17 @@ Itens Selecionado - *Pirão*
                     />
 
                     <label>
-                        <h4>Forma de Pagamento:</h4>
-                        <select
+                        <h4 style={
+                            {
+                                padding:'10px 20px',
+                                textAlign: 'center'
+                            }
+                        }>Forma de Pagamento:</h4>
+                        <select style={
+                            {
+                                padding:"10px"
+                            }
+                        }
                             name="formaPagamento"
                             value={clientData.formaPagamento}
                             onChange={handleInputChange}
@@ -259,6 +270,9 @@ Itens Selecionado - *Pirão*
                         </select>
                     </label>
                 </form>
+
+            </div>
+            <div>
                 <div className="btn">
                     <button
                         onClick={enviarWhatsApp}
@@ -268,15 +282,17 @@ Itens Selecionado - *Pirão*
                         Enviar Pedido
                     </button>
                 </div>
-            </div>
 
-            <button
-                onClick={handleBackToCardapio}
-                role="button"
-                className="button-name"
-            >
-                Voltar para o Cardápio
-            </button>
+                <div>
+                    <button
+                        onClick={handleBackToCardapio}
+                        role="button"
+                        className="button-name btn"
+                    >
+                        Voltar para o Cardápio
+                    </button>
+                </div>
+            </div>
         </div>
     );
 };
