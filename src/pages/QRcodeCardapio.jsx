@@ -5,7 +5,7 @@ const QRcodeCardapio = () => {
     return (
         <div>
             <header>
-                <img src={logo} alt="" width={200} />
+                <img src={logo} alt="" width={200} className='lg' />
             </header>
             <main className='main-cardapio'>
                 <div>
