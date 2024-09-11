@@ -175,7 +175,7 @@ _*Agradecemos a preferência! Aguardamos sua visita novamente.*_
         };
 
         const mensagem = gerarMensagem();
-        const numeroWhatsApp = '5571992961630';  // Altere para o número de WhatsApp real
+        const numeroWhatsApp = '5571987136715';  // Altere para o número de WhatsApp real
         const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
         window.open(linkWhatsApp, '_blank');

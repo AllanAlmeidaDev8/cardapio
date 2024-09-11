@@ -303,7 +303,7 @@ Agradecemos a preferência! Aguardamos sua visita novamente.
         };
 
         const mensagem = gerarMensagem();
-        const numeroWhatsApp = '5571992961630';
+        const numeroWhatsApp = '5571987136715';
         const linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
 
         window.open(linkWhatsApp, '_blank');
