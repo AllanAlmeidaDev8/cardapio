@@ -37,7 +37,8 @@ function App() {
             justifyContent: 'space-evenly',
             padding: '10px',
             paddingBottom: '10px',
-            alignItems: 'center'
+            alignItems: 'center',
+           
           }
         }>
           <Link to='https://www.instagram.com/sr_pizza_bar/' target='_black'><img src={instaLogo} alt="" width={50}/></Link>

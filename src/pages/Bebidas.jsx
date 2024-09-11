@@ -18,8 +18,20 @@ import imgHeinLog from '../assets/imgBebidas/heineken.webp';
 import imgSkink from '../assets/imgBebidas/skinka.jpeg';
 import imgCervSet from '../assets/imgBebidas/stella-artois.jpeg';
 import imgMalzBier from '../assets/imgBebidas/malzebier.webp';
-import imgCerveja from '../assets/imgBebidas/malzebier.webp';
+import imgCerImp from '../assets/imgBebidas/imperio.jpg';
 import imgSem from '../assets/semImagen.webp';
+import imgCervBud from '../assets/imgBebidas/budweiser.jpg';
+import imgCervCor from '../assets/imgBebidas/corona-long.jpg';
+import imgCervBrah from '../assets/imgBebidas/cerveja-brahma-350ml-puro-malte_80752.webp';
+import imgDeva from '../assets/imgBebidas/6571c2fd558925a4e88991d5.webp';
+import imgAmis from '../assets/imgBebidas/cerveja-amstel-lata-350ml_1.webp';
+import imgIta from '../assets/imgBebidas/ita10.png';
+import imgSchi from '../assets/imgBebidas/images.jpeg';
+import imgIce from '../assets/imgBebidas/00018090_61456696-1e3d-4cfe-b0cc-d4b2b4226ed5.avif';
+import imgVinh from '../assets/imgBebidas/28.jpg';
+import imgCaip from '../assets/imgBebidas/b003cb6a8c5828399d548e534fa42cc6_XL.jpg';
+import imgRosca from '../assets/imgBebidas/1caipirinhas.png';
+import imgRosEsp from '../assets/imgBebidas/caipirinha-morango-kiwi.jpg';
 
 
 const Bebidas = () => {
@@ -48,19 +60,19 @@ const Bebidas = () => {
 
         { nome: 'Cerveja stella artois', valor: 8.0, imagem: imgCervSet },
         { nome: 'Malzebier Lata', valor: 6.0, imagem: imgMalzBier },
-        { nome: 'Imperio Long Neck', valor: 8.0, imagem: imgSem },
-        { nome: 'Corona Long Neck', valor: 8.0, imagem: imgSem },
-        { nome: 'Budwiser Long Neck', valor: 8.0, imagem: imgSem },
-        { nome: 'Brahma duplo malte lata', valor: 5.0, imagem: imgSem },
-        { nome: 'Devassa lata', valor: 5.0, imagem: imgSem },
-        { nome: 'Amstel lata', valor: 5.0, imagem: imgSem },
-        { nome: 'Itaipava lata', valor: 4.0, imagem: imgSem },
-        { nome: 'Schin lata', valor: 3.0, imagem: imgSem },
-        { nome: 'Ice ', valor: 9.0, imagem: imgSem },
+        { nome: 'Imperio Long Neck', valor: 8.0, imagem: imgCerImp },
+        { nome: 'Corona Long Neck', valor: 8.0, imagem: imgCervCor },
+        { nome: 'Budwiser Long Neck', valor: 8.0, imagem: imgCervBud },
+        { nome: 'Brahma duplo malte lata', valor: 5.0, imagem: imgCervBrah},
+        { nome: 'Devassa lata', valor: 5.0, imagem: imgDeva},
+        { nome: 'Amstel lata', valor: 5.0, imagem: imgAmis },
+        { nome: 'Itaipava lata', valor: 4.0, imagem: imgIta },
+        { nome: 'Schin lata', valor: 3.0, imagem: imgSchi},
+        { nome: 'Ice ', valor: 9.0, imagem: imgIce },
     ];
 
     const bebidasVinhos = [
-        { nome: 'Vinho Tinto', valor: 38.0, imagem: imgSem },
+        { nome: 'Vinho Tinto', valor: 38.0, imagem: imgVinh},
 
     ];
 
@@ -70,9 +82,9 @@ const Bebidas = () => {
     ];
 
     const bebidasCoqueteis = [
-        { nome: 'Caipirinha', valor: 8.0, imagem: imgSem },
-        { nome: 'Rosca tradicional', valor: 10.0, imagem: imgSem },
-        { nome: 'Rosca Especial Morango e Kiuí', valor: 12.0, imagem: imgSem },
+        { nome: 'Caipirinha', valor: 8.0, imagem: imgCaip },
+        { nome: 'Rosca tradicional', valor: 10.0, imagem: imgRosca },
+        { nome: 'Rosca Especial Morango e Kiuí', valor: 12.0, imagem: imgRosEsp },
     ];
 
     const [carrinho, setCarrinho] = useState([]);

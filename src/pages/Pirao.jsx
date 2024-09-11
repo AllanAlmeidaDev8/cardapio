@@ -10,6 +10,9 @@ import imagemCasa from '../assets/imgPratos/aipimcasa.jpg';
 import imagemComp from '../assets/imgPratos/aipimcompleto.jpg';
 import imagemPGN from '../assets/imgPratos/pirao.jpg';
 import imagemPfrngo from '../assets/imgPratos/aipimfrango.jpeg';
+import imgPirFil from '../assets/imgPratos/pirao-com-file.jpg';
+import imgPirFran from '../assets/imgPratos/pirao-camarao.jpg';
+import imgInd from '../assets/imgPratos/individual.jpg';
 
 
 
@@ -38,7 +41,7 @@ const Pirao = () => {
         {
             nome: 'Pirão de aipim com Filé',
             valor: 52.0,
-            imagem: imgPizz,
+            imagem: imgPirFil,
             ingredientes: []
         },
         {
@@ -56,7 +59,7 @@ const Pirao = () => {
         {
             nome: 'Pirão de aipim com frango',
             valor: 45.0,
-            imagem: imagemPGN,
+            imagem: imgPirFran,
             ingredientes: []
         },
         {
@@ -68,7 +71,7 @@ const Pirao = () => {
         {
             nome: 'Pirão de aipim individual (Frango ou Carne)',
             valor: 25.0,
-            imagem: imagemPfrngo,
+            imagem: imgInd,
             ingredientes: ['Frango ou Carne']
         },
 
