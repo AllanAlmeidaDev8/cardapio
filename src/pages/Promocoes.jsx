@@ -96,7 +96,7 @@ const Promocoes = () => {
         };
 
         const mensagem = gerarMensagem();
-        const telefone = '5571992961630'; // Substitua pelo número de telefone desejado com DDD
+        const telefone = '5571987136715'; // Substitua pelo número de telefone desejado com DDD
         const url = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
         window.open(url, '_blank');
     };
