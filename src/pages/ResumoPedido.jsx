@@ -4,17 +4,22 @@ const ResumoPedido = ({ tipo, tamanho, sabores, valorPizza, nome, endereco, pont
     const gerarMensagem = () => {
         return `
 *Resumo do Pedido*
+-------------------------------------------------------------------------
 
 Tipo de Pizza: ${tipo ? tipo.replace('Pizza', '') : 'Nenhum'}
 Tamanho: ${tamanho}
 Sabores: ${sabores.length > 0 ? sabores.join(', ') : 'Nenhum'}
 Valor: R$ ${valorPizza.toFixed(2)}
+-------------------------------------------------------------------------
 
 Nome: ${nome}
 Endereço: ${endereco}
 Ponto de Referência: ${pontoReferencia}
 Forma de Pagamento: ${formaPagamento ? formaPagamento.charAt(0).toUpperCase() + formaPagamento.slice(1) : 'Não selecionada'}
-        `.trim();
+-------------------------------------------------------------------------
+_Obrigado pela preferência volte sempre_      
+
+`.trim();
     };
 
     const enviarWhatsApp = () => {

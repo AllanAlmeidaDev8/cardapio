@@ -138,21 +138,25 @@ const Pirao = () => {
     const enviarWhatsApp = () => {
         const gerarMensagem = () => {
             return `
-            Pedido Sr pizza bar
--------------------------------------------------
+            *Pedido Sr pizza bar*
+=================================================
 
 Nome: ${clientData.nome}\n
 Endereço: ${clientData.endereco}\n
 Ponto de Referência: ${clientData.pontoReferencia}\n
 Forma de Pagamento: ${clientData.formaPagamento}\n
+
 -------------------------------------------------
 
 Itens Selecionado - *Pirão*
--------------------------------------------------
+==================================================
                 Itens: ${carrinho
                     .map((item) => `${item.nome} x ${item.quantidade}`)
                     .join(', ')}
                 Total: R$ ${calcularTotal()}
+==================================================
+          
+_*Agradecemos a preferência! Aguardamos sua visita novamente.*_
             `;
         };
 

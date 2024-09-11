@@ -154,18 +154,22 @@ Pedido Sr pizza bar
 Nome: ${clientData.nome}
 Endereço: ${clientData.endereco}
 Ponto de Referência: ${clientData.pontoReferencia}
+-------------------------------------------------
+
 
 Itens Selecionados - *Bebidas*
--------------------------------------------------
+==================================================
 
 Itens: ${carrinho.map((item) => `${item.nome} x ${item.quantidade}`).join(', ')}
 
 --------------------------------------------------
 Forma de Pagamento: ${clientData.formaPagamento}
 
+
 Total: R$ ${calcularTotal()}
+==================================================
           
-Agradecemos a preferência! Aguardamos sua visita novamente.
+_*Agradecemos a preferência! Aguardamos sua visita novamente.*_
 
 `;
         };
