@@ -15,14 +15,14 @@ const Promocoes = () => {
     const promocoesItems = [
         { 
             nome: 'Pizza dobrada Grande ', 
-            valor: 56.00, 
+            valor: 54.90, 
             imagem: '/assets/pizza-coca.jpg',
             ingrediente:'Português, calabresa e 4 queijos',
          },
         { 
             nome: 'Combo Família (3 pizzas médias) + Refri 2L', 
             valor: 80.00,
-            ingrediente:'Português, calabresa e 4 queijos', 
+            ingrediente:'Sabores Tradicionais', 
             imagem: '/assets/combo-familia.jpg' 
         },
         { 

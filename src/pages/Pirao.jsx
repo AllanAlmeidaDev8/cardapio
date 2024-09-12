@@ -35,7 +35,7 @@ const Pirao = () => {
         {
             nome: 'Pirão de aipim com camarão',
             valor: 52.0,
-            imagem: imagemPGN,
+            imagem: imgPirFran,
             ingredientes: []
         },
         {
@@ -59,7 +59,7 @@ const Pirao = () => {
         {
             nome: 'Pirão de aipim com frango',
             valor: 45.0,
-            imagem: imgPirFran,
+            imagem: imagemPGN,
             ingredientes: []
         },
         {

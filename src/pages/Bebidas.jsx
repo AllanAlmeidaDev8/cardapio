@@ -61,7 +61,7 @@ const Bebidas = () => {
         { nome: 'Cerveja stella artois', valor: 8.0, imagem: imgCervSet },
         { nome: 'Malzebier Lata', valor: 6.0, imagem: imgMalzBier },
         { nome: 'Imperio Long Neck', valor: 8.0, imagem: imgCerImp },
-        { nome: 'Corona Long Neck', valor: 8.0, imagem: imgCervCor },
+        { nome: 'Corona Long Neck', valor: 9.0, imagem: imgCervCor },
         { nome: 'Budwiser Long Neck', valor: 8.0, imagem: imgCervBud },
         { nome: 'Brahma duplo malte lata', valor: 5.0, imagem: imgCervBrah},
         { nome: 'Devassa lata', valor: 5.0, imagem: imgDeva},
