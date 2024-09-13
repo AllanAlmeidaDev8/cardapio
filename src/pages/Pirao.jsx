@@ -83,6 +83,7 @@ const Pirao = () => {
         endereco: '',
         pontoReferencia: '',
         formaPagamento: 'Dinheiro',
+        telefone: '',
     });
 
     const adicionarAoCarrinho = (item) => {
@@ -138,10 +139,11 @@ const Pirao = () => {
     const enviarWhatsApp = () => {
         const gerarMensagem = () => {
             return `
-            *Pedido Sr pizza bar*
-=================================================
+    *Pedido Sr pizza bar*
+================================
 
 Nome: ${clientData.nome}\n
+Telefone: ${clientData.telefone}\n
 Endereço: ${clientData.endereco}\n
 Ponto de Referência: ${clientData.pontoReferencia}\n
 Forma de Pagamento: ${clientData.formaPagamento}\n
@@ -149,12 +151,12 @@ Forma de Pagamento: ${clientData.formaPagamento}\n
 -------------------------------------------------
 
 Itens Selecionado - *Pirão*
-==================================================
+================================
                 Itens: ${carrinho
                     .map((item) => `${item.nome} x ${item.quantidade}`)
                     .join(', ')}
                 Total: R$ ${calcularTotal()}
-==================================================
+=================================
           
 _*Agradecemos a preferência! Aguardamos sua visita novamente.*_
             `;
@@ -236,6 +238,15 @@ _*Agradecemos a preferência! Aguardamos sua visita novamente.*_
                         required
                     />
 
+                    <label>Telefone:</label>
+                    <input
+                        className="input"
+                        type="tel"
+                        name="telefone"
+                        value={clientData.telefone}
+                        onChange={handleInputChange}
+                    />
+
                     <label>Endereço:</label>
                     <input
                         className="input"
@@ -257,13 +268,13 @@ _*Agradecemos a preferência! Aguardamos sua visita novamente.*_
                     <label>
                         <h4 style={
                             {
-                                padding:'10px 20px',
+                                padding: '10px 20px',
                                 textAlign: 'center'
                             }
                         }>Forma de Pagamento:</h4>
                         <select style={
                             {
-                                padding:"10px"
+                                padding: "10px"
                             }
                         }
                             name="formaPagamento"

@@ -95,6 +95,7 @@ const Pizzaselector = ({ tipo, tamanho, onSelect }) => {
                         checked={selecionados.includes(sabor.nome)}
                         onChange={() => handleCheckboxChange(sabor.nome)}
                     />
+                    
                    
                         <div className="sabor-container">
                             <div className="ingrediente_list">

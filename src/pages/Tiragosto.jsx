@@ -281,23 +281,23 @@ const Tiragosto = () => {
             return `
           *Seu Pedido*
 Pedido Sr pizza bar
--------------------------------------------------
-
-Nome: ${clientData.nome}
-Endereço: ${clientData.endereco}
+------------------------------\n
+Nome: ${clientData.nome}\n
+Telefone: ${clientData.telefone}\n
+Endereço: ${clientData.endereco}\n
 Ponto de Referência: ${clientData.pontoReferencia}
 
-Itens Selecionados - *Tira gosto*
--------------------------------------------------
+Itens Selecionados - *Tira gosto*\n
+------------------------------\n
 
-Itens: ${carrinho.map((item) => `${item.nome} x ${item.quantidade}`).join(', ')}
+Itens: ${carrinho.map((item) => `${item.nome} x ${item.quantidade}`).join(', ')}\n
 
---------------------------------------------------
-Forma de Pagamento: ${clientData.formaPagamento}
+-------------------------------\n
+Forma de Pagamento: ${clientData.formaPagamento}\n
 
-Total: R$ ${calcularTotal()}
+Total: R$ ${calcularTotal()}\n
           
-Agradecemos a preferência! Aguardamos sua visita novamente.
+Agradecemos a preferência! Aguardamos sua visita novamente.\n
 
 `;
         };
@@ -461,6 +461,15 @@ Agradecemos a preferência! Aguardamos sua visita novamente.
             <form className='cadastro'>
                 <label>Nome:</label>
                 <input className='input' type="text" name="nome" value={clientData.nome} onChange={handleInputChange} required />
+
+                <label>Telefone:</label>
+                    <input
+                        className="input"
+                        type="tel"
+                        name="telefone"
+                        value={clientData.telefone}
+                        onChange={handleInputChange}
+                    />
 
                 <label>Endereço:</label>
                 <input className='input' type="text" name="endereco" value={clientData.endereco} onChange={handleInputChange} required />

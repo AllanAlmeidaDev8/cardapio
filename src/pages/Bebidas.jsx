@@ -152,6 +152,7 @@ Pedido Sr pizza bar
 -------------------------------------------------
 
 Nome: ${clientData.nome}
+Telefone: ${clientData.telefone}\n
 Endereço: ${clientData.endereco}
 Ponto de Referência: ${clientData.pontoReferencia}
 -------------------------------------------------
@@ -324,6 +325,15 @@ _*Agradecemos a preferência! Aguardamos sua visita novamente.*_
                 <label htmlFor="nome">Nome:</label>
 
                 <input type="text" id='nome' className='input' name="nome" placeholder="Nome" value={clientData.nome} onChange={handleInputChange} required />
+
+                <label>Telefone:</label>
+                    <input
+                        className="input"
+                        type="tel"
+                        name="telefone"
+                        value={clientData.telefone}
+                        onChange={handleInputChange}
+                    />
 
                 <label htmlFor="end">Endereço:</label>
                 <input type="text" id='end' className='input' name="endereco" placeholder="Endereço" value={clientData.endereco} onChange={handleInputChange} required />

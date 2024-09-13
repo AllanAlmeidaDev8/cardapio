@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ResumoPedido = ({ tipo, tamanho, sabores, valorPizza, nome, endereco, pontoReferencia, formaPagamento, onConfirmar }) => {
+const ResumoPedido = ({ tipo, tamanho, sabores,telefone, valorPizza, nome, endereco, pontoReferencia, formaPagamento, onConfirmar }) => {
     const gerarMensagem = () => {
         return `
 *Resumo do Pedido*
@@ -13,6 +13,7 @@ Valor: R$ ${valorPizza.toFixed(2)}
 -------------------------------------------------------------------------
 
 Nome: ${nome}
+Telefone: ${telefone}\n
 Endereço: ${endereco}
 Ponto de Referência: ${pontoReferencia}
 Forma de Pagamento: ${formaPagamento ? formaPagamento.charAt(0).toUpperCase() + formaPagamento.slice(1) : 'Não selecionada'}
