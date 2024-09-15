@@ -62,12 +62,7 @@ const Pirao = () => {
             imagem: imagemPGN,
             ingredientes: []
         },
-        {
-            nome: 'Pirão de aipim com carne do sol',
-            valor: 45.0,
-            imagem: imagemPGN,
-            ingredientes: []
-        },
+        {nome: 'Pirão de aipim com carne do sol', valor: 45.0,imagem: imagemPGN,ingredientes: []},
         {
             nome: 'Pirão de aipim individual (Frango ou Carne)',
             valor: 25.0,
