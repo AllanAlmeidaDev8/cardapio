@@ -185,11 +185,17 @@
 // };
 
 // export default Promocoes;
-import React from 'react'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './Pizza.css';
+import './Button.css';
+import './Tiragosto.css';
 
 const Promocoes = () => {
   return (
-    <div>Promocoes</div>
+    <div>
+        <h1>Promoções</h1>
+    </div>
   )
 }
 
