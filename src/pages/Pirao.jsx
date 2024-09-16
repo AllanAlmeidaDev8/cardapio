@@ -26,49 +26,14 @@ const Pirao = () => {
     };
 
     const piraoItems = [
-        {
-            nome: 'Sr turbinado',
-            valor: 110.0,
-            imagem: imagemTurb,
-            ingredientes: ['Aipim', 'Carne do sol', 'Calabresa', 'Camarão', 'Fumeiro', 'Queijo Coalho']
-        },
-        {
-            nome: 'Pirão de aipim com camarão',
-            valor: 52.0,
-            imagem: imgPirFran,
-            ingredientes: []
-        },
-        {
-            nome: 'Pirão de aipim com Filé',
-            valor: 52.0,
-            imagem: imgPirFil,
-            ingredientes: []
-        },
-        {
-            nome: 'Pirão de aipim da casa',
-            valor: 62.0,
-            imagem: imagemCasa,
-            ingredientes: ['Aipim', 'Carne do Sol', 'Frango', 'Camarão']
-        },
-        {
-            nome: 'Pirão de aipim completo',
-            valor: 75.0,
-            imagem: imagemComp,
-            ingredientes: ['Aipim', 'Frango', 'Camarão', 'Carne do sol', 'Calabresa', 'Salada']
-        },
-        {
-            nome: 'Pirão de aipim com frango',
-            valor: 45.0,
-            imagem: imagemPGN,
-            ingredientes: []
-        },
+        {nome: 'Sr turbinado', valor: 110.0, imagem: imagemTurb, ingredientes: ['Aipim', 'Carne do sol', 'Calabresa', 'Camarão', 'Fumeiro', 'Queijo Coalho'] },
+        { nome: 'Pirão de aipim com camarão', valor: 52.0, imagem: imgPirFran, ingredientes: [] },
+        { nome: 'Pirão de aipim com Filé', valor: 52.0, imagem: imgPirFil, ingredientes: [] },
+        { nome: 'Pirão de aipim da casa', valor: 62.0, imagem: imagemCasa, ingredientes: ['Aipim', 'Carne do Sol', 'Frango', 'Camarão'] },
+        { nome: 'Pirão de aipim completo', valor: 75.0, imagem: imagemComp, ingredientes: ['Aipim', 'Frango', 'Camarão', 'Carne do sol', 'Calabresa', 'Salada'] },
+        {nome: 'Pirão de aipim com frango',valor: 45.0,imagem: imagemPGN,ingredientes: []},
         {nome: 'Pirão de aipim com carne do sol', valor: 45.0,imagem: imagemPGN,ingredientes: []},
-        {
-            nome: 'Pirão de aipim individual (Frango ou Carne)',
-            valor: 25.0,
-            imagem: imgInd,
-            ingredientes: ['Frango ou Carne']
-        },
+        {nome: 'Pirão de aipim individual (Frango ou Carne)',valor: 25.0,imagem: imgInd,ingredientes: ['Frango ou Carne']},
 
     ];
 
