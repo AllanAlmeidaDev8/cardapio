@@ -1,0 +1,67 @@
+.type{
+    width: 100vw;
+    height: 30vh;
+}
+.input_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   position: relative;
+   top: 30%;
+    
+}
+.pizza_prices{
+    background: orange;
+    box-shadow: 3px 3px 3px black;
+    margin: 30px 0;
+    margin: auto 0;
+    padding: 20px;
+    text-align: justify;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px;
+    padding-top: 50px;
+    align-content: space-around;
+}
+fieldset{
+    background-color: rgba(255, 215, 141, 0.568);
+    height: 100px;
+    padding: 10px;
+    white-space: normal;
+}
+.ingrediente_list{
+    white-space: normal;
+    
+}
+.checkbox{
+   position: absolute;
+   left: 10%;
+}
+.ingrediente_list{
+    font-size: 12px;
+    display: flex;
+    margin-top: 50px;
+}
+
+.cadastro{
+    display: flex;
+    align-items: flex-start;
+}
+.input{
+    width: 90%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.referencia{
+    height: 10vh;
+    margin: 10px;
+    padding-top: 30px;
+}
+
+
+
+

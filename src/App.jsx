@@ -1,43 +1,55 @@
-import React, { useState, useEffect } from 'react';
-import PizzaSelection from './pages/PizzaSelection';
-import CartWithClientData from './components/CartWithClientData';
-import ClientForm from './components/ClientForm';
+import { Outlet,Link } from 'react-router-dom'
+import Logo from '../src/assets/logo.png';
+import './App.css';
+import instaLogo from './assets/instagram.svg';
+import tikTokLogo from './assets/tik-tok.svg';
+import faceLogo from './assets/face-book.svg';
 
-const App = () => {
-  const [cartItems, setCartItems] = useState([]);
-  const [clientData, setClientData] = useState({});
-  const [paymentMethod, setPaymentMethod] = useState('');
+function App() {
 
-  // Carregar carrinho e dados do localStorage ao montar o componente
-  useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
-    const storedClient = JSON.parse(localStorage.getItem('clientData')) || {};
-    const storedPayment = localStorage.getItem('paymentMethod') || '';
-
-    setCartItems(storedCart);
-    setClientData(storedClient);
-    setPaymentMethod(storedPayment);
-  }, []);
-
-  // Salvar carrinho, dados do cliente e método de pagamento no localStorage quando houver alterações
-  useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cartItems));
-    localStorage.setItem('clientData', JSON.stringify(clientData));
-    localStorage.setItem('paymentMethod', paymentMethod);
-  }, [cartItems, clientData, paymentMethod]);
 
   return (
-    <div>
-     <PizzaSelection setCartItems={setCartItems} cartItems={cartItems} />
+    <div className="conteiner_app folder">
+      <div className="folder">
+        <img src={Logo} alt="logo" className=' logo' />
+        
+      </div> 
+      <div className="intro">
+      <h1 className="title">Seja bem vindo</h1>
+      <p>A Sr Pizza Bar</p>
+      </div>
       
-      <CartWithClientData 
-        cartItems={cartItems} 
-        setCartItems={setCartItems} 
-        clientData={clientData} 
-        paymentMethod={paymentMethod} 
-      />
-    </div>
-  );
-};
+      <main>
 
-export default App;
+        <Outlet />
+        <div>
+          <h3 style={
+            {
+              color: 'silver',
+              padding: '10px',
+              paddingTop: '20px'
+            }
+          }>Siga-nos em?</h3>
+        </div>
+        <div className="nossasRedes" style={
+          {
+            display: 'flex',
+            justifyContent: 'space-evenly',
+            padding: '10px',
+            paddingBottom: '10px',
+            alignItems: 'center',
+           
+          }
+        }>
+          <Link to='https://www.instagram.com/sr_pizza_bar/' target='_black'><img src={instaLogo} alt="" width={50}/></Link>
+          <Link to='https://www.tiktok.com/@ronaldofragoso2' target='_black'><img src={tikTokLogo} alt="" width={40}/></Link>
+          <Link to='https://www.facebook.com/srpizzabar' target='_black'><img src={faceLogo} alt="" width={40}/></Link>
+        </div>
+      </main>
+      <footer><Link to="https://www.instagram.com/opennetbr" target='_blank'>&#169; OPENNET &#169;</Link></footer>
+
+    </div>
+  )
+}
+
+export default App

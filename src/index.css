@@ -1,133 +1,31 @@
-#root{
-    margin: 0 auto;
-        
-}
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    font-family: "Roboto", sans-serif;
-    
+  margin: 0;
+  padding: 0;
 }
-h2{
-  text-transform: capitalize;
-  color: #1b1b1b;
-  font-size: 15px;
+body{
+  background-color: #840000;
+  font-family: "Roboto", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  box-sizing: border-box;  
 }
-a{
-  text-decoration: none;
+.conteiner_top h2{
+  padding: 50px 10px;
 }
 
-.header{
-    background-color: #940202;
-    height: 30vh;
+.title{
+  color: white;
 }
-
-.container_menu nav ul {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-  
-  .container_menu nav ul li {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .container_menu nav ul li a {
-    display: block;
-    padding: 5px;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 600;
-  }
-  .car{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5px;
-    background-color: #079402;
-    margin-bottom: 30px;
-  }
-  .conteiner_pizza h2{
-    text-transform: uppercase;
-  }
-  .conteiner_pizza p{
-    font-size: 12px;
-    color: #5c5b5b;
-  }
-.lupa-conteiner{
+footer{
   display: flex;
-  align-items: center;
-  background:#EBEBEB ;
-  border-radius: 10px;
+  justify-content: center;
 }
-
-#Pizzas{
-  background:#fdfdfd ;
+li{
+  list-style-type: none;
+}
+footer a{
+  color: white;
+  text-decoration: none;
   padding: 20px;
-  text-align: justify;
-}
-#Pizzas h2{
-  line-height: 3;
-  font-size: 1.3em;
-
-}
-.conteiner_pizza{
- 
- padding: 20px;
- margin: auto;
- text-align: justify;
- line-height: 2;
-}
-.item_list{
-  border-bottom: solid rgb(194, 194, 194) 1px;
-  padding-bottom: 10px;
-  padding-top: 10px;
 }
 
-.preco{
-  font-weight: 600;
-  font-size: 15px;
-}
-
- .iten_selection{
-  padding: 10px;
-  width: 100vh;
-  line-height: 2;
- }
-.iten_selection .button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 12px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 16px;
-}
-.button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 12px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.buttonAdd {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 5px;
-  cursor: pointer;
-  border-radius: 100%;
-  font-size: 16px;
-}
-.Remove{
-  background-color: #d63232;
-}

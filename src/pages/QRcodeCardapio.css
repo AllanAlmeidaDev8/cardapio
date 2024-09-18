@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap');
+
+.lg{
+    position: relative;
+    position: relative;
+    top: 50%;
+    left: 50%;
+   transform: translate(-50%, 25%);
+
+}
+.main-cardapio {
+    text-align: justify !important;
+    padding: 10px 20px;
+}
+
+.main-cardapio h2 {
+    
+    margin: 0 auto;
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 10px;
+    background: orange;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.582);
+}
+
+.title_box {
+    padding: 10px;
+   text-align: center;
+    line-height: 2;  
+}
+
+.title_box p {
+    margin: 0 auto;
+    
+}
+
+.title_box span {
+    font-size: 1.5em;
+    padding: 5px;
+    font-family: "Bungee Tint", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text_box {
+    font-size: 12px;
+    line-height: 2;
+}
+
+.text_box ul li {
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.text_box ul li p {
+    font-weight: 300;
+    color: gray;
+    font-size: 10px;
+}
