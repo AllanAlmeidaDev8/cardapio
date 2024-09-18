@@ -11,4 +11,12 @@
     padding: 10px;
   }
 
- 
+ .icoCar{
+    text-decoration: none;
+    color: black;
+    position: fixed;
+    top: 6%;
+    left: 50%;
+    
+
+ }

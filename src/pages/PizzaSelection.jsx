@@ -45,27 +45,27 @@ import imgCamAl from '../assets/img/pratos/Camarão-Alho-e-oleo.webp';
 import imgCarnFrl from '../assets/img/pratos/carne-do-sol-fritas.webp.jpg';
 import imgCodFrl from '../assets/img/pratos/codorna.webp.jpg';
 import imgCamFri from '../assets/img/pratos/camarao-com-fritas.webp';
-import imgIscFranFri from '../assets/img/pratos/isca_de_frango.webp'; 
-import imgQueiMe from '../assets/img/pratos/queijo-melaco.jpg';                  
-import imgQueiPic from '../assets/img/pratos/picanhacomqueijo.webp';                  
-import imgQPicFri from '../assets/img/pratos/picanha-com-fritas.webp.jpg';                  
-import imgQPicAc from '../assets/img/pratos/picanha-acebolada.png';                  
-import imgCupiAc from '../assets/img/pratos/Como-fazer-bife-de-cupim.jpg';                  
-import imgFilFri from '../assets/img/pratos/file-com-fritas.webp.jpg';                  
-import imgFilQuei from '../assets/img/pratos/fileCoquejo.webp';                  
-import imgBat from '../assets/img/pratos/batata1.webp';                  
-import imgBatSr from '../assets/img/pratos/batataSr.png';                  
-import imgTabFri from '../assets/img/pratos/Tabua_queijos_frios.webp';                  
-import imgKitSal from '../assets/img/pratos/kitSalgados.webp';                  
-import imgEspCam from '../assets/img/pratos/espetinhCam.jpeg';                  
-import imgEspCar from '../assets/img/pratos/espetinhCar.jpeg';                  
-import imgCalSur from '../assets/img/pratos/sururu.jpeg';                  
-import imgCalCar from '../assets/img/pratos/calsoCarne.jpeg';                  
-import imgFeiTro from '../assets/img/pratos/feijaoTropeiro.jpg';                  
-import imgFrad from '../assets/img/pratos/fradinho.jpg';                  
-import imgPaoFat from '../assets/img/pratos/paofatiado.jpg';                  
-import imgSald from '../assets/img/pratos/vinagrete.jpg';                  
-import imgFarof from '../assets/img/pratos/farofa.jpg';  
+import imgIscFranFri from '../assets/img/pratos/isca_de_frango.webp';
+import imgQueiMe from '../assets/img/pratos/queijo-melaco.jpg';
+import imgQueiPic from '../assets/img/pratos/picanhacomqueijo.webp';
+import imgQPicFri from '../assets/img/pratos/picanha-com-fritas.webp.jpg';
+import imgQPicAc from '../assets/img/pratos/picanha-acebolada.png';
+import imgCupiAc from '../assets/img/pratos/Como-fazer-bife-de-cupim.jpg';
+import imgFilFri from '../assets/img/pratos/file-com-fritas.webp.jpg';
+import imgFilQuei from '../assets/img/pratos/fileCoquejo.webp';
+import imgBat from '../assets/img/pratos/batata1.webp';
+import imgBatSr from '../assets/img/pratos/batataSr.png';
+import imgTabFri from '../assets/img/pratos/Tabua_queijos_frios.webp';
+import imgKitSal from '../assets/img/pratos/kitSalgados.webp';
+import imgEspCam from '../assets/img/pratos/espetinhCam.jpeg';
+import imgEspCar from '../assets/img/pratos/espetinhCar.jpeg';
+import imgCalSur from '../assets/img/pratos/sururu.jpeg';
+import imgCalCar from '../assets/img/pratos/calsoCarne.jpeg';
+import imgFeiTro from '../assets/img/pratos/feijaoTropeiro.jpg';
+import imgFrad from '../assets/img/pratos/fradinho.jpg';
+import imgPaoFat from '../assets/img/pratos/paofatiado.jpg';
+import imgSald from '../assets/img/pratos/vinagrete.jpg';
+import imgFarof from '../assets/img/pratos/farofa.jpg';
 
 
 
@@ -130,34 +130,34 @@ const PizzaSelection = ({ setCartItems, cartItems }) => {
   };
 
   const tiraGostoOptions = [
-    { nome: 'Batata Frita',preco: 22.0, imagem: imgBat, ingredientes: [],},
-    { nome: 'Batata Sr', preco: 45.0, imagem: imgBatSr, ingredientes: ['Batata', 'Queijo', 'Bacon'],},
-    { nome: 'Tabua de frios', preco: 25.0, imagem: imgTabFri, ingredientes: ['Queijo Reino', 'Salames','Azeitonas','Gorgonzola','Peito de peru','Queijo prato'], },
-    { nome: 'Kit Salgados',preco: 28.0, imagem: imgKitSal, ingredientes: ['Coxinhas', 'Kibes', 'Pasteis'],},
-    { nome: 'Espetinho de camarão', preco: 12.0,imagem: imgEspCam, ingredientes: [],},
-    { nome: 'Espetinho carne',preco: 10.0,imagem: imgEspCar,ingredientes: [],},
-    { nome: 'Caldo de sururu',preco: 14.0,imagem: imgCalSur,ingredientes: ['Sururu', 'Coentro', 'Alho'],},
-    { nome: 'Caldo de carne seca', preco: 12.0, imagem: imgCalCar,ingredientes: ['Carne seca', 'Batata', 'Coentro'],},
-    { nome: 'Farofa', preco: 4.0, imagem: imgFarof, ingredientes: [] }, 
-    { nome: 'Salada Vinagrete', preco: 6.0, imagem: imgSald, ingredientes: [] }, 
-    { nome: 'Pão fatiado', preco: 2.5,imagem: imgPaoFat, ingredientes: [] }, 
-    { nome: 'Feijão fradinho', preco: 6.0, imagem: imgFrad, ingredientes: [] }, 
+    { nome: 'Batata Frita', preco: 22.0, imagem: imgBat, ingredientes: [], },
+    { nome: 'Batata Sr', preco: 45.0, imagem: imgBatSr, ingredientes: ['Batata', 'Queijo', 'Bacon'], },
+    { nome: 'Tabua de frios', preco: 25.0, imagem: imgTabFri, ingredientes: ['Queijo Reino', 'Salames', 'Azeitonas', 'Gorgonzola', 'Peito de peru', 'Queijo prato'], },
+    { nome: 'Kit Salgados', preco: 28.0, imagem: imgKitSal, ingredientes: ['Coxinhas', 'Kibes', 'Pasteis'], },
+    { nome: 'Espetinho de camarão', preco: 12.0, imagem: imgEspCam, ingredientes: [], },
+    { nome: 'Espetinho carne', preco: 10.0, imagem: imgEspCar, ingredientes: [], },
+    { nome: 'Caldo de sururu', preco: 14.0, imagem: imgCalSur, ingredientes: ['Sururu', 'Coentro', 'Alho'], },
+    { nome: 'Caldo de carne seca', preco: 12.0, imagem: imgCalCar, ingredientes: ['Carne seca', 'Batata', 'Coentro'], },
+    { nome: 'Farofa', preco: 4.0, imagem: imgFarof, ingredientes: [] },
+    { nome: 'Salada Vinagrete', preco: 6.0, imagem: imgSald, ingredientes: [] },
+    { nome: 'Pão fatiado', preco: 2.5, imagem: imgPaoFat, ingredientes: [] },
+    { nome: 'Feijão fradinho', preco: 6.0, imagem: imgFrad, ingredientes: [] },
     { nome: 'Feijão Tropeiro', preco: 8.0, imagem: imgFeiTro, ingredientes: ['Feijão', 'Farofa', 'Linguiça', 'Ovos'], },
     { nome: 'Carne do Sol mista', preco: 50.0, imagem: imgCarmis, ingredientes: [], },
     { nome: 'Carne com Fritas', preco: 50.0, imagem: imgCarnFrl, ingredientes: [] },
-    { nome: 'Carne do Sol', preco: 45.0, imagem: imgCarnSol, ingredientes: [], }, 
-    { nome: 'Frango a passarinha', preco: 45.0, imagem: imgFranPass, ingredientes: [], }, 
+    { nome: 'Carne do Sol', preco: 45.0, imagem: imgCarnSol, ingredientes: [], },
+    { nome: 'Frango a passarinha', preco: 45.0, imagem: imgFranPass, ingredientes: [], },
     { nome: 'Arrumadinho', preco: 45.0, imagem: imgArru, ingredientes: ['Carne', 'Farofa', 'Vinagrete', 'Feijão '], },
-    { nome: 'Camarão ao alho e óleo', preco: 46.0, imagem: imgCamAl, ingredientes: ['Camarão', 'Alho'], }, 
-    { nome: 'Isca de frango com fritas', preco: 44.0, imagem: imgIscFranFri, ingredientes: [], }, 
-    { nome: 'Camarão com fritas', preco: 55.0, imagem: imgCamFri, ingredientes: ['Camarão', 'Batata frita'], }, 
+    { nome: 'Camarão ao alho e óleo', preco: 46.0, imagem: imgCamAl, ingredientes: ['Camarão', 'Alho'], },
+    { nome: 'Isca de frango com fritas', preco: 44.0, imagem: imgIscFranFri, ingredientes: [], },
+    { nome: 'Camarão com fritas', preco: 55.0, imagem: imgCamFri, ingredientes: ['Camarão', 'Batata frita'], },
     { nome: 'Codorna Frita', preco: 45.0, imagem: imgCodFrl, ingredientes: [], },
-    { nome: 'Queijo coalho ', preco: 25.0, imagem: imgQueiMe, ingredientes: ['Queijo coalho', 'Melaço', 'Molho de pizza'], }, 
-    { nome: 'Picanha c/ queijo coalho', preco: 57.0, imagem: imgQueiPic, ingredientes: ['Picanha', 'Queijo coalho'], }, 
-    { nome: 'Picanha acebolada', preco: 57.0, imagem: imgQPicAc, ingredientes: ['Picanha', 'Cebola'], }, 
-    { nome: 'Picanha c/ fritas', preco: 58.0, imagem: imgQPicFri, ingredientes: ['Picanha', 'Batata frita'], }, 
-    { nome: 'Cupim acebolado', preco: 47.0, imagem: imgCupiAc, ingredientes: ['Cupim', 'Cebola'], }, 
-    { nome: 'Filé c/ fritas', preco: 52.0, imagem: imgFilFri, ingredientes: ['Filé', 'Batata frita'], }, 
+    { nome: 'Queijo coalho ', preco: 25.0, imagem: imgQueiMe, ingredientes: ['Queijo coalho', 'Melaço', 'Molho de pizza'], },
+    { nome: 'Picanha c/ queijo coalho', preco: 57.0, imagem: imgQueiPic, ingredientes: ['Picanha', 'Queijo coalho'], },
+    { nome: 'Picanha acebolada', preco: 57.0, imagem: imgQPicAc, ingredientes: ['Picanha', 'Cebola'], },
+    { nome: 'Picanha c/ fritas', preco: 58.0, imagem: imgQPicFri, ingredientes: ['Picanha', 'Batata frita'], },
+    { nome: 'Cupim acebolado', preco: 47.0, imagem: imgCupiAc, ingredientes: ['Cupim', 'Cebola'], },
+    { nome: 'Filé c/ fritas', preco: 52.0, imagem: imgFilFri, ingredientes: ['Filé', 'Batata frita'], },
     { nome: 'Filé c/ queijo coalho', preco: 52.0, imagem: imgFilQuei, ingredientes: ['Filé', 'Queijo coalho'], },
   ];
 
@@ -286,8 +286,12 @@ const PizzaSelection = ({ setCartItems, cartItems }) => {
             <label htmlFor="search"><IoSearch className='lupaIco' /></label><input id='search' type="text" placeholder='Pequise pelo item ou nome' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
           </div>
           {/* Ícone do carrinho e número de itens */}
-          <div> <FaShoppingCart size={24} />
-            <span>{totalCartItems}</span></div>
+
+          <a href="#itensSelections" className='icoCar'>
+            <div> <FaShoppingCart size={24} />
+              <span>{totalCartItems}</span>
+            </div>
+          </a>
         </div>
 
       </div>
@@ -372,7 +376,7 @@ const PizzaSelection = ({ setCartItems, cartItems }) => {
 
         <div className="iten_selection">
           <div>
-            <h3>Itens Selecionados</h3>
+            <h3 id='itensSelections'>Itens Selecionados</h3>
             <ul>
               {selectedFlavors.map((item, index) => (
                 <li key={index}>
