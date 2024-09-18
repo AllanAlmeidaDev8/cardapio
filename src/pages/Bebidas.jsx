@@ -57,7 +57,6 @@ const Bebidas = () => {
 
     const bebidasCerveja = [
         { nome: 'Cerveja heineken long neck', valor: 9.0, imagem: imgHeinLog },
-
         { nome: 'Cerveja stella artois', valor: 8.0, imagem: imgCervSet },
         { nome: 'Malzebier Lata', valor: 6.0, imagem: imgMalzBier },
         { nome: 'Imperio Long Neck', valor: 8.0, imagem: imgCerImp },
