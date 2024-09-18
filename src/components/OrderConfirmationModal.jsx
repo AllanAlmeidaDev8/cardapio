@@ -25,11 +25,11 @@ const OrderConfirmationModal = ({ cartItems, clientData, paymentMethod, closeMod
         // Caso contrário, exibe apenas o nome (para bebidas e tira-gostos)
         return `${item.nome} - ${item.quantity} x R$${item.price}`;
       }).join('\n')}
-      
+       ---------------------------------
       *Total:* R$ ${total}
     `;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/+5571992961630?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/+5571987136715?text=${encodedMessage}`;
     window.open(whatsappUrl, '_blank');
   };
 
