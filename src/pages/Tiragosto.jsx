@@ -13,27 +13,27 @@ import imgCamAl from '../assets/imgPratos/Camarão-Alho-e-oleo.webp';
 import imgCarnFrl from '../assets/imgPratos/carne-do-sol-fritas.webp.jpg';
 import imgCodFrl from '../assets/imgPratos/codorna.webp.jpg';
 import imgCamFri from '../assets/imgPratos/camarao-com-fritas.webp';
-import imgIscFranFri from '../assets/imgPratos/isca_de_frango.webp'; 
-import imgQueiMe from '../assets/imgPratos/queijo-melaco.jpg';                  
-import imgQueiPic from '../assets/imgPratos/picanhacomqueijo.webp';                  
-import imgQPicFri from '../assets/imgPratos/picanha-com-fritas.webp.jpg';                  
-import imgQPicAc from '../assets/imgPratos/picanha-acebolada.png';                  
-import imgCupiAc from '../assets/imgPratos/Como-fazer-bife-de-cupim.jpg';                  
-import imgFilFri from '../assets/imgPratos/file-com-fritas.webp.jpg';                  
-import imgFilQuei from '../assets/imgPratos/fileCoquejo.webp';                  
-import imgBat from '../assets/imgPratos/batata1.webp';                  
-import imgBatSr from '../assets/imgPratos/batataSr.png';                  
-import imgTabFri from '../assets/imgPratos/Tabua_queijos_frios.webp';                  
-import imgKitSal from '../assets/imgPratos/kitSalgados.webp';                  
-import imgEspCam from '../assets/imgPratos/espetinhCam.jpeg';                  
-import imgEspCar from '../assets/imgPratos/espetinhCar.jpeg';                  
-import imgCalSur from '../assets/imgPratos/sururu.jpeg';                  
-import imgCalCar from '../assets/imgPratos/calsoCarne.jpeg';                  
-import imgFeiTro from '../assets/imgPratos/feijaoTropeiro.jpg';                  
-import imgFrad from '../assets/imgPratos/fradinho.jpg';                  
-import imgPaoFat from '../assets/imgPratos/paofatiado.jpg';                  
-import imgSald from '../assets/imgPratos/vinagrete.jpg';                  
-import imgFarof from '../assets/imgPratos/farofa.jpg';                  
+import imgIscFranFri from '../assets/imgPratos/isca_de_frango.webp';
+import imgQueiMe from '../assets/imgPratos/queijo-melaco.jpg';
+import imgQueiPic from '../assets/imgPratos/picanhacomqueijo.webp';
+import imgQPicFri from '../assets/imgPratos/picanha-com-fritas.webp.jpg';
+import imgQPicAc from '../assets/imgPratos/picanha-acebolada.png';
+import imgCupiAc from '../assets/imgPratos/Como-fazer-bife-de-cupim.jpg';
+import imgFilFri from '../assets/imgPratos/file-com-fritas.webp.jpg';
+import imgFilQuei from '../assets/imgPratos/fileCoquejo.webp';
+import imgBat from '../assets/imgPratos/batata1.webp';
+import imgBatSr from '../assets/imgPratos/batataSr.png';
+import imgTabFri from '../assets/imgPratos/Tabua_queijos_frios.webp';
+import imgKitSal from '../assets/imgPratos/kitSalgados.webp';
+import imgEspCam from '../assets/imgPratos/espetinhCam.jpeg';
+import imgEspCar from '../assets/imgPratos/espetinhCar.jpeg';
+import imgCalSur from '../assets/imgPratos/sururu.jpeg';
+import imgCalCar from '../assets/imgPratos/calsoCarne.jpeg';
+import imgFeiTro from '../assets/imgPratos/feijaoTropeiro.jpg';
+import imgFrad from '../assets/imgPratos/fradinho.jpg';
+import imgPaoFat from '../assets/imgPratos/paofatiado.jpg';
+import imgSald from '../assets/imgPratos/vinagrete.jpg';
+import imgFarof from '../assets/imgPratos/farofa.jpg';
 
 const Tiragosto = () => {
     const navigate = useNavigate();
@@ -43,85 +43,56 @@ const Tiragosto = () => {
     };
 
     const tiraGostoItems = [
-        { nome: 'Carne do Sol mista',
-            valor: 50.0,
-            imagem: imgCarmis,
-            ingredientes: [],
-        },
-        { nome: 'Carne com Fritas',
-            valor: 50.0,
-            imagem: imgCarnFrl,
-            ingredientes: []
-        },
-        { nome: 'Carne do Sol',
-            valor: 45.0,
-            imagem: imgCarnSol,
-            ingredientes: [],
-        },
-        { nome: 'Frango a passarinha',
-            valor: 45.0,
-            imagem: imgFranPass,
-            ingredientes: [],
-        },
-        { nome: 'Arrumadinho',
-            valor: 45.0,
-            imagem: imgArru,
-            ingredientes: ['Carne', 'Farofa', 'Vinagrete', 'Feijão '],
-        },
-        { nome: 'Camarão ao alho e óleo',
-            valor: 46.0,
-            imagem: imgCamAl,
-            ingredientes: ['Camarão', 'Alho'],
-        },
-        { nome: 'Isca de frango com fritas',
-            valor: 44.0,
-            imagem: imgIscFranFri,
-            ingredientes: [],
-        },
-        { nome: 'Camarão com fritas',
-            valor: 55.0,
-            imagem: imgCamFri,
-            ingredientes: ['Camarão', 'Batata frita'],
-        },
-        { nome: 'Codorna Frita',
-            valor: 45.0,
-            imagem: imgCodFrl,
-            ingredientes: [],
-        },
+        { nome: 'Carne do Sol mista', valor: 50.0, imagem: imgCarmis, ingredientes: [], },
+        { nome: 'Carne com Fritas', valor: 50.0, imagem: imgCarnFrl, ingredientes: [] },
+        { nome: 'Carne do Sol', valor: 45.0, imagem: imgCarnSol, ingredientes: [], },
+        { nome: 'Frango a passarinha', valor: 45.0, imagem: imgFranPass, ingredientes: [], },
+        { nome: 'Arrumadinho', valor: 45.0, imagem: imgArru, ingredientes: ['Carne', 'Farofa', 'Vinagrete', 'Feijão '], },
+        { nome: 'Camarão ao alho e óleo', valor: 46.0, imagem: imgCamAl, ingredientes: ['Camarão', 'Alho'], },
+        { nome: 'Isca de frango com fritas', valor: 44.0, imagem: imgIscFranFri, ingredientes: [], },
+        { nome: 'Camarão com fritas', valor: 55.0, imagem: imgCamFri, ingredientes: ['Camarão', 'Batata frita'], },
+        { nome: 'Codorna Frita', valor: 45.0, imagem: imgCodFrl, ingredientes: [], },
     ];
 
     const tiraGostoChapaItems = [
-        { nome: 'Queijo coalho ',
+        {
+            nome: 'Queijo coalho ',
             valor: 25.0,
             imagem: imgQueiMe,
             ingredientes: ['Queijo coalho', 'Melaço', 'Molho de pizza'],
         },
-        { nome: 'Picanha c/ queijo coalho',
+        {
+            nome: 'Picanha c/ queijo coalho',
             valor: 57.0,
             imagem: imgQueiPic,
             ingredientes: ['Picanha', 'Queijo coalho'],
         },
-        { nome: 'Picanha acebolada',
+        {
+            nome: 'Picanha acebolada',
             valor: 57.0,
             imagem: imgQPicAc,
             ingredientes: ['Picanha', 'Cebola'],
         },
-        { nome: 'Picanha c/ fritas',
+        {
+            nome: 'Picanha c/ fritas',
             valor: 58.0,
             imagem: imgQPicFri,
             ingredientes: ['Picanha', 'Batata frita'],
         },
-        { nome: 'Cupim acebolado',
+        {
+            nome: 'Cupim acebolado',
             valor: 47.0,
             imagem: imgCupiAc,
             ingredientes: ['Cupim', 'Cebola'],
         },
-        { nome: 'Filé c/ fritas',
+        {
+            nome: 'Filé c/ fritas',
             valor: 52.0,
             imagem: imgFilFri,
             ingredientes: ['Filé', 'Batata frita'],
         },
-        { nome: 'Filé c/ queijo coalho',
+        {
+            nome: 'Filé c/ queijo coalho',
             valor: 52.0,
             imagem: imgFilQuei,
             ingredientes: ['Filé', 'Queijo coalho'],
@@ -129,28 +100,29 @@ const Tiragosto = () => {
     ];
 
     const petiscosItems = [
-        { nome: 'Batata Frita',valor: 22.0, imagem: imgBat, ingredientes: [],},
-        { nome: 'Batata Sr', valor: 45.0, imagem: imgBatSr, ingredientes: ['Batata', 'Queijo', 'Bacon'],},
-        {  nome: 'Tabua de frios', valor: 25.0, imagem: imgTabFri, ingredientes: ['Queijo Reino', 'Salames', 'Azeitonas','Gorgonzola','Peito de peru','Queijo prato'], },
-        { nome: 'Kit Salgados',
+        { nome: 'Batata Frita', valor: 22.0, imagem: imgBat, ingredientes: [], },
+        { nome: 'Batata Sr', valor: 45.0, imagem: imgBatSr, ingredientes: ['Batata', 'Queijo', 'Bacon'], },
+        { nome: 'Tabua de frios', valor: 25.0, imagem: imgTabFri, ingredientes: ['Queijo Reino', 'Salames', 'Azeitonas', 'Gorgonzola', 'Peito de peru', 'Queijo prato'], },
+        {
+            nome: 'Kit Salgados',
             valor: 28.0,
             imagem: imgKitSal,
             ingredientes: ['Coxinhas', 'Kibes', 'Pasteis'],
         },
-        {nome: 'Espetinho de camarão', valor: 12.0,imagem: imgEspCam, ingredientes: [],},
-        {nome: 'Espetinho carne',valor: 10.0,imagem: imgEspCar,ingredientes: [],},
-        {nome: 'Caldo de sururu',valor: 14.0,imagem: imgCalSur,ingredientes: ['Sururu', 'Coentro', 'Alho'],},
-        {nome: 'Caldo de carne seca', valor: 12.0, imagem: imgCalCar,ingredientes: ['Carne seca', 'Batata', 'Coentro'],
+        { nome: 'Espetinho de camarão', valor: 12.0, imagem: imgEspCam, ingredientes: [], },
+        { nome: 'Espetinho carne', valor: 10.0, imagem: imgEspCar, ingredientes: [], },
+        { nome: 'Caldo de sururu', valor: 14.0, imagem: imgCalSur, ingredientes: ['Sururu', 'Coentro', 'Alho'], },
+        {
+            nome: 'Caldo de carne seca', valor: 12.0, imagem: imgCalCar, ingredientes: ['Carne seca', 'Batata', 'Coentro'],
         },
     ];
 
     const porcoesItems = [
         { nome: 'Farofa', valor: 4.0, imagem: imgFarof, ingredientes: [] },
         { nome: 'Salada Vinagrete', valor: 6.0, imagem: imgSald, ingredientes: [] },
-        { nome: 'Pão fatiado', valor: 2.5,imagem: imgPaoFat, ingredientes: [] },
+        { nome: 'Pão fatiado', valor: 2.5, imagem: imgPaoFat, ingredientes: [] },
         { nome: 'Feijão fradinho', valor: 6.0, imagem: imgFrad, ingredientes: [] },
-        { nome: 'Feijão Tropeiro', valor: 8.0, imagem: imgFeiTro, ingredientes: ['Feijão', 'Farofa', 'Linguiça', 'Ovos'],
-        },
+        {nome: 'Feijão Tropeiro', valor: 8.0, imagem: imgFeiTro, ingredientes: ['Feijão', 'Farofa', 'Linguiça', 'Ovos'], },
     ];
 
     const [carrinho, setCarrinho] = useState([]);
@@ -376,11 +348,11 @@ Agradecemos a preferência! Aguardamos sua visita novamente.\n
                                 R$ {(item.valor * item.quantidade).toFixed(2)}
                             </span>
                             <button
-                                    className="remov"
-                                    onClick={() => removerDoCarrinho(item)}
-                                >
-                                    -
-                                </button>
+                                className="remov"
+                                onClick={() => removerDoCarrinho(item)}
+                            >
+                                -
+                            </button>
                         </div>
                     ))
                 ) : (
@@ -397,13 +369,13 @@ Agradecemos a preferência! Aguardamos sua visita novamente.\n
                 <input className='input' type="text" name="nome" value={clientData.nome} onChange={handleInputChange} required />
 
                 <label>Telefone:</label>
-                    <input
-                        className="input"
-                        type="tel"
-                        name="telefone"
-                        value={clientData.telefone}
-                        onChange={handleInputChange}
-                    />
+                <input
+                    className="input"
+                    type="tel"
+                    name="telefone"
+                    value={clientData.telefone}
+                    onChange={handleInputChange}
+                />
 
                 <label>Endereço:</label>
                 <input className='input' type="text" name="endereco" value={clientData.endereco} onChange={handleInputChange} required />

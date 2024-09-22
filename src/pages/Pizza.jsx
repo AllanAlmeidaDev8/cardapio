@@ -3,9 +3,10 @@ import ResumoPedido from './ResumoPedido';
 import Pizzaselector from './Pizzaselector';
 import './Pizza.css';
 import './Button.css';
+import Menu from './Menu';
 
 const Pizza = () => {
-    const [tipo, setTipo] = useState('');
+    const [tipo, setTipo] = useState('PizzaTradicional'); // Inicializa com "PizzaTradicional"
     const [tamanho, setTamanho] = useState('');
     const [nome, setNome] = useState('');
     const [endereco, setEndereco] = useState('');
@@ -14,10 +15,6 @@ const Pizza = () => {
     const [telefone, setTelefone] = useState(''); // Novo estado para telefone
     const [saboresSelecionados, setSaboresSelecionados] = useState([]);
     const [mostrarResumo, setMostrarResumo] = useState(false);
-
- 
-
-
 
     const handleTipoChange = (e) => {
         setTipo(e.target.value);
@@ -91,14 +88,36 @@ const Pizza = () => {
         <div className="container">
             {!mostrarResumo ? (
                 <>
-                    <div className="pizza_type type">
+               <Menu/>
+                    <div className="pizza_type type" id='1'>
                         <h2 className='subTitle'>Escolha qual o tipo de pizza</h2>
                         <div className="input_box">
-                            <input type="radio" id="tipo_top" name="ptype" value="PizzaTop" onChange={handleTipoChange} />
+                            <input
+                                type="radio"
+                                id="tipo_top"
+                                name="ptype"
+                                value="PizzaTop"
+                                onChange={handleTipoChange}
+                                checked={tipo === 'PizzaTop'}
+                            />
                             <label htmlFor="tipo_top">Top</label>
-                            <input type="radio" id="tipo_especial" name="ptype" value="PizzaEspecial" onChange={handleTipoChange} />
+                            <input
+                                type="radio"
+                                id="tipo_especial"
+                                name="ptype"
+                                value="PizzaEspecial"
+                                onChange={handleTipoChange}
+                                checked={tipo === 'PizzaEspecial'}
+                            />
                             <label htmlFor="tipo_especial">Especial</label>
-                            <input type="radio" id="tipo_tradicional" name="ptype" value="PizzaTradicional" onChange={handleTipoChange} />
+                            <input
+                                type="radio"
+                                id="tipo_tradicional"
+                                name="ptype"
+                                value="PizzaTradicional"
+                                onChange={handleTipoChange}
+                                checked={tipo === 'PizzaTradicional'} // Tradicional como selecionado por padrão
+                            />
                             <label htmlFor="tipo_tradicional">Tradicional</label>
                         </div>
                     </div>

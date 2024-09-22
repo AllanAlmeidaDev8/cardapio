@@ -25,3 +25,16 @@
     display: flex;
     gap: 10px;
 }
+.bebida-imagem{
+    position: absolute;
+    right: 10%;
+    margin-top: 40px;
+}
+.fieldset-box{
+    background-color: rgb(255, 255, 255);
+    height: 130px;
+    margin-top: 30px;
+}
+.fieldset-box p{
+    margin-top: 50px;
+}

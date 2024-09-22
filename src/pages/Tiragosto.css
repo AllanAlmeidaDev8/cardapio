@@ -95,3 +95,12 @@
     display: flex;
     justify-content: space-between;
 }
+.horarioFunc{
+    text-align: justify;
+    padding:20px;
+     line-height:2;
+     font-size: 12px;
+}
+.horarioFunc p{
+    color: #adadad;
+}

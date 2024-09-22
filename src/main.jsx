@@ -29,10 +29,10 @@ const router = createBrowserRouter([
       },
       {
         path:"/cardapio",
-        element:<Cardapio/>
+        element:<Pizza/>
       },
       {
-        path:"/cardapio/pizzas",
+        path:"/cardapio/listas_itens",
         element:<Pizza/>
       },
       {

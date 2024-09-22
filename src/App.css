@@ -24,15 +24,12 @@ legend{
     font-size: 20px;
 }
 .folder {
-    background-image: url(/src/pages/img/pz01.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+   
     width: 100vw;
-    height: 30vh;
     background-position: center;
   }
   .logo{
-    width: 200px;
+    width: 50px;
     border-radius: 50%;
     position: absolute;
     top: 10%;
@@ -59,11 +56,7 @@ main {
 
 .intro {
     font-family: "Lilita One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    font-size: 2em;
-    padding: 10px;
+   
   }
 
 
@@ -79,3 +72,104 @@ main {
     display: flex;
     flex-direction: row;
 }
+
+/* menu */
+.btnMenu{
+    position: fixed;
+}
+#menu {
+    z-index: 2;
+    
+  }
+  
+  #menu-bar {
+    width: 45px;
+    height: 40px;
+    margin: 30px 0 20px 20px;
+    cursor: pointer;
+  }
+  
+  .bar {
+    height: 5px;
+    width: 100%;
+    background-color: #DC052D;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+  }
+  
+  #bar1 {
+    transform: translateY(-4px);
+  }
+  
+  #bar3 {
+    transform: translateY(4px);
+  }
+  
+  .nav {
+    transition: 0.3s ease;
+    display: none;
+  }
+  
+  .nav ul {
+    padding: 0 22px;
+  }
+  
+  .nav li {
+    list-style: none;
+    padding: 12px 0;
+  }
+  
+  .nav li a {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .nav li a:hover {
+    font-weight: bold;
+  }
+  
+  .menu-bg, #menu {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  
+  .menu-bg {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 30px 0 20px 20px;
+    background: radial-gradient(circle, #ffffff, #ffffff);
+    box-shadow: 1px 1px 9px 2px #00000075;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    
+  }
+  
+  .change {
+    display: block;
+  }
+  
+  .change .bar {
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .change #bar1 {
+    transform: translateY(4px) rotateZ(-45deg);
+  }
+  
+  .change #bar2 {
+    opacity: 0;
+  }
+  
+  .change #bar3 {
+    transform: translateY(-6px) rotateZ(45deg);
+  }
+  
+  .change-bg {
+    width: 520px;
+    height: 460px;
+    transform: translate(-60%,-30%);
+  }
