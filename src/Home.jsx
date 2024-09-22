@@ -23,7 +23,7 @@ const Home = () => {
       </div>
       <div className='conteiner_top'>
         <h2>Faça o seu Pedido Aqui</h2>
-        <h1>Site em manutenção porfavor retorne ao Whatsapp</h1>
+        <h1>Site em manutenção por favor retorne ao Whatsapp</h1>
         {/* <Link to='/cardapio' role="button" className="button-name">Cardapio</Link> */}
       </div>
 
